@@ -1,23 +1,35 @@
-header
+mat-toolbar
     width: 100%
     padding: 15px 25px
     background: #fff
-    display: flex
-    align-items: stretch
+    height: 86px
 
     #header__logo
         width: 210px
-        height: 36px
+        height: 52px
         display: inline-block
 
     #header__title
-        margin-left: 40px
+        margin-left: 88px
+        line-height: 15px
         display: inline-block
 
         h3
+            font-weight: 400
             font-size: 24px
         p
-            font-size: 14px
+            font-weight: 200
+            font-size: 16px
+            margin: 0 !important
 
         h3, p
             color: #004C9F
+
+::ng-deep .mat-icon-button
+    width: -moz-fit-content !important
+
+ul li
+    list-style: none
+
+    span
+        margin-left: 5px

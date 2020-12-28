@@ -1,5 +1,5 @@
-<header>
-    <div class="header__leftSide">
+<mat-toolbar>
+    <div class="header__leftSide" fxLayout="row" fxLayoutAlign="start center">
         <a href="#">
             <img src="../../assets/img/logo.png" alt="tricolortv" id="header__logo">
         </a>
@@ -8,11 +8,29 @@
             <p>Dashboard</p>
         </span>
     </div>
-    <div class="header__rightSide">
-        <span id="header__accountPanel">
-            <mat-icon aria-hidden="false" aria-label="notifications">notifications</mat-icon>
-            <mat-icon aria-hidden="false" aria-label="mail">mail outline</mat-icon>
-            <mat-icon aria-hidden="false" aria-label="logout">login</mat-icon>
-        </span>
+    <div class="header__rightSide" fxFlex fxLayout="row" fxLayoutAlign="end center">
+        <ul fxLayout="row" fxLayoutGap="28px">
+            <li>
+                <button mat-icon-button>
+                    <mat-icon>mail outline</mat-icon>
+                </button>
+            </li>
+            <li>
+                <button mat-icon-button>
+                    <mat-icon>notifications</mat-icon>
+                </button>
+            </li>
+            <li>
+                <button mat-icon-button>
+                    <mat-icon>person_outline</mat-icon>
+                    <span>Александр Абдулаев</span>
+                </button>
+            </li>
+            <li>
+                <button mat-icon-button>
+                    <mat-icon>exit_to_app</mat-icon>
+                </button>
+            </li>
+        </ul>
     </div>
-</header>
+</mat-toolbar>
