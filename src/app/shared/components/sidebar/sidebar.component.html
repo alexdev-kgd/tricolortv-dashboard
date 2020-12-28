@@ -1,1 +1,38 @@
-<p>sidebar works!</p>
+<mat-divider></mat-divider>
+<mat-nav-list>
+    <a mat-list-item [routerLinkActive]="['list-item-active']" routerLink="/home">
+        <mat-icon>home</mat-icon>
+        Главная
+    </a>
+    <mat-divider></mat-divider>
+    <a mat-list-item [routerLinkActive]="['list-item-active']" routerLink="/statistics">
+        <mat-icon>stacked_line_chart</mat-icon>
+        Статистика
+    </a>
+    <mat-divider></mat-divider>
+    <a mat-list-item [routerLinkActive]="['list-item-active']" routerLink="/articles">
+        <mat-icon>subtitles</mat-icon>
+        Статьи
+    </a>
+    <mat-divider></mat-divider>
+    <a mat-list-item [routerLinkActive]="['list-item-active']" routerLink="/staff">
+        <mat-icon>people</mat-icon>
+        Сотрудники
+    </a>
+    <mat-divider></mat-divider>
+    <a mat-list-item [routerLinkActive]="['list-item-active']" routerLink="/modules">
+        <mat-icon>business</mat-icon>
+        Модули
+    </a>
+    <mat-divider></mat-divider>
+    <a mat-list-item [routerLinkActive]="['list-item-active']" routerLink="/comments">
+        <mat-icon>message</mat-icon>
+        Комментарии
+    </a>
+    <mat-divider></mat-divider>
+    <a mat-list-item [routerLinkActive]="['list-item-active']" routerLink="/settings">
+        <mat-icon>settings</mat-icon>
+        Настройки
+    </a>
+    <mat-divider></mat-divider>
+</mat-nav-list>
