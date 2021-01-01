@@ -8,9 +8,18 @@ import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDividerModule } from '@angular/material/divider';
 
+import { HomeComponent } from 'src/app/pages/home/home.component';
+import { StatisticsComponent } from 'src/app/pages/statistics/statistics.component';
+import { ArticlesComponent } from 'src/app/pages/articles/articles.component';
+
+import { ChartService } from 'src/app/pages/chart.service';
+
 @NgModule({
   declarations: [
-    DefaultComponent
+    DefaultComponent,
+    HomeComponent,
+    StatisticsComponent,
+    ArticlesComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +28,10 @@ import { MatDividerModule } from '@angular/material/divider';
     MatSidenavModule,
     MatCardModule,
     MatPaginatorModule,
-    MatDividerModule
+    MatDividerModule,
+  ],
+  providers: [
+    ChartService
   ]
 })
 export class DefaultModule { }

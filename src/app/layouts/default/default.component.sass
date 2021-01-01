@@ -1,3 +1,15 @@
+@mixin menu-arrow
+    content: ""
+    position: absolute
+    width: 80%
+    height: 6%
+    top: 45%
+    left: 11%
+    background-image: url("../../../assets/img/arrow-gray.png")
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: 100%
+
 :host
     display: flex
     flex-direction: column
@@ -10,4 +22,29 @@
         height: 100%
 
     mat-drawer-content
-        padding: 20px 50px
+        padding-right: 50px
+        padding-top: 20px
+        display: flex
+
+    #toggleBar
+        margin-top: -20px
+        width: 29px
+        height: 100%
+        background: #f4f4f4
+        display: inline-block
+        margin-right: 50px
+        position: relative
+
+        &:hover
+            background: #f0f0f0
+            cursor: pointer
+
+    .toggleBar--opened
+        &:before
+            @include menu-arrow
+            transform: rotate(90deg)
+
+    .toggleBar--closed
+        &:before
+            @include menu-arrow
+            transform: rotate(-90deg)

@@ -5,6 +5,9 @@
         <app-sidebar></app-sidebar>
     </mat-drawer>
     <mat-drawer-content>
+        <div id="toggleBar" (click)="toggleMenu()"
+                            [ngClass]="menuOpened ? 'toggleBar--opened' : 'toggleBar--closed'">
+        </div>
         <router-outlet></router-outlet>
     </mat-drawer-content>
 </mat-drawer-container>
