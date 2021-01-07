@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./articles.component.sass']
 })
 export class ArticlesComponent implements OnInit {
+  value = ""
 
   constructor() { }
 

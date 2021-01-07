@@ -10,11 +10,13 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list'; 
 import { RouterModule } from '@angular/router/';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { LinearChartComponent } from './components/linear-chart/linear-chart.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    LinearChartComponent
   ],
   imports: [
     CommonModule,
@@ -25,11 +27,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatDividerModule,
     MatListModule,
     MatMenuModule,
-    FlexLayoutModule
+    FlexLayoutModule,
   ],
   exports: [
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    LinearChartComponent
   ]
 })
 export class SharedModule { }

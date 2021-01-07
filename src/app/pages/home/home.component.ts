@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ChartService } from '../chart.service';
 
 @Component({
   selector: 'app-home',
@@ -8,10 +7,9 @@ import { ChartService } from '../chart.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private chartService: ChartService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.chartService.loadD3JSON('../../../json/satelliteProviders.json', '#satellite');
   }
 
 }

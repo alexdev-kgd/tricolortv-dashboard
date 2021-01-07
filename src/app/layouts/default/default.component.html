@@ -4,10 +4,10 @@
     <mat-drawer mode="side" [opened]="menuOpened">
         <app-sidebar></app-sidebar>
     </mat-drawer>
-    <mat-drawer-content>
+    <mat-drawer-content [@routeAnimations]="prepareRoute(outlet)">
         <div id="toggleBar" (click)="toggleMenu()"
                             [ngClass]="menuOpened ? 'toggleBar--opened' : 'toggleBar--closed'">
         </div>
-        <router-outlet></router-outlet>
+        <router-outlet #outlet="outlet"></router-outlet>
     </mat-drawer-content>
 </mat-drawer-container>

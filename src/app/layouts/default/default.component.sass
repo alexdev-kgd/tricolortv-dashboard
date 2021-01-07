@@ -10,13 +10,16 @@
     background-position: center center
     background-size: 100%
 
+$sidebarWidth: 230px
+$togglebarWidth: 30px
+
 :host
     display: flex
     flex-direction: column
     height: 100%
-
+    
     mat-drawer
-        width: 230px
+        width: $sidebarWidth
 
     mat-drawer-container
         height: 100%
@@ -24,16 +27,17 @@
     mat-drawer-content
         padding-right: 50px
         padding-top: 20px
+        padding-left: $togglebarWidth + 50px
         display: flex
 
     #toggleBar
         margin-top: -20px
-        width: 29px
+        margin-left: -80px
+        width: $togglebarWidth
         height: 100%
         background: #f4f4f4
-        display: inline-block
-        margin-right: 50px
-        position: relative
+        position: fixed
+        z-index: 9999
 
         &:hover
             background: #f0f0f0

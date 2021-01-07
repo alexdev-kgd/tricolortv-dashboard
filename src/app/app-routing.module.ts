@@ -14,13 +14,16 @@ const routes: Routes = [{
     pathMatch: 'full'
   }, {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    data: { animation: 'HomePage' }
   }, {
     path: 'stats',
-    component: StatisticsComponent
+    component: StatisticsComponent,
+    data: { animation: 'StatsPage' }
   }, {
     path: 'articles',
-    component: ArticlesComponent
+    component: ArticlesComponent,
+    data: { animation: 'ArticlesPage' }
   }]
 }];
 

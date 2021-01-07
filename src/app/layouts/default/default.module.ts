@@ -7,12 +7,17 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatGridListModule }  from '@angular/material/grid-list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { FormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatIconModule } from '@angular/material/icon';
 
 import { HomeComponent } from 'src/app/pages/home/home.component';
 import { StatisticsComponent } from 'src/app/pages/statistics/statistics.component';
 import { ArticlesComponent } from 'src/app/pages/articles/articles.component';
-
-import { ChartService } from 'src/app/pages/chart.service';
 
 @NgModule({
   declarations: [
@@ -29,9 +34,15 @@ import { ChartService } from 'src/app/pages/chart.service';
     MatCardModule,
     MatPaginatorModule,
     MatDividerModule,
+    MatGridListModule,
+    MatButtonModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    FormsModule,
+    MatIconModule
   ],
   providers: [
-    ChartService
   ]
 })
 export class DefaultModule { }
