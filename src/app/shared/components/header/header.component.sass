@@ -1,35 +1,37 @@
-mat-toolbar
-    width: 100%
-    padding: 15px 25px
-    background: #fff
-    height: 86px
+:host
 
-    #header__logo
-        width: 210px
-        height: 52px
-        display: inline-block
+    mat-toolbar
+        width: 100%
+        padding: 15px 25px
+        background: #fff
+        height: 86px
 
-    #header__title
-        margin-left: 88px
-        line-height: 15px
-        display: inline-block
+        #header__logo
+            width: 210px
+            height: 52px
+            display: inline-block
 
-        h3
-            font-weight: 400
-            font-size: 24px
-        p
-            font-weight: 200
-            font-size: 16px
-            margin: 0 !important
+        #header__title
+            margin-left: 88px
+            line-height: 15px
+            display: inline-block
 
-        h3, p
-            color: #004C9F
+            h3
+                font-weight: 400
+                font-size: 24px
+            p
+                font-weight: 200
+                font-size: 16px
+                margin: 0 !important
 
-::ng-deep .mat-icon-button
-    width: -moz-fit-content !important
+            h3, p
+                color: #004C9F
 
-ul li
-    list-style: none
+    li > button
+        width: -moz-fit-content !important
 
-    span
-        margin-left: 5px
+    ul li
+        list-style: none
+
+        span
+            margin-left: 5px
