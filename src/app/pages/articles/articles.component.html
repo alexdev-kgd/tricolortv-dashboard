@@ -16,8 +16,8 @@
             <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
         </mat-datepicker-toggle>
     </mat-form-field>
-    <mat-paginator [length]="50"
-                    [pageSize]="10">
+    <mat-paginator [length]="length"
+                    [pageSize]="pageSize" #paginator>
     </mat-paginator>
 </div>
 <div id="articles__container">

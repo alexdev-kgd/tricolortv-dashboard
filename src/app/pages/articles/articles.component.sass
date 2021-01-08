@@ -76,3 +76,26 @@
 
             ::ng-deep .mat-form-field-flex
                 align-items: center
+        
+        .mat-paginator
+
+            ::ng-deep .mat-paginator-page-size
+                display: none !important
+
+            ::ng-deep .mat-paginator-container
+                min-height: auto
+                justify-content: center
+
+            ::ng-deep .mat-paginator-range-label
+                order: 2
+
+            ::ng-deep .mat-paginator-range-actions
+                width: 100%
+                align-items: center
+                justify-content: space-between
+                
+                .mat-focus-indicator:nth-child(2)
+                    order: 1
+
+                .mat-focus-indicator:nth-child(3)
+                    order: 3

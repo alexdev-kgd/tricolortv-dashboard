@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MatSidenavModule } from '@angular/material/sidenav'; 
 import { MatCardModule } from '@angular/material/card';
-import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatPaginator, MatPaginatorIntl, MatPaginatorModule } from '@angular/material/paginator';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatGridListModule }  from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
@@ -18,6 +18,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { HomeComponent } from 'src/app/pages/home/home.component';
 import { StatisticsComponent } from 'src/app/pages/statistics/statistics.component';
 import { ArticlesComponent } from 'src/app/pages/articles/articles.component';
+
+import { PaginatorLabelService } from 'src/app/shared/services/paginator-label.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { ArticlesComponent } from 'src/app/pages/articles/articles.component';
     FormsModule,
     MatIconModule
   ],
-  providers: [
-  ]
+  providers: [{
+    provide: MatPaginatorIntl,
+    useClass: PaginatorLabelService
+  }]
 })
 export class DefaultModule { }
