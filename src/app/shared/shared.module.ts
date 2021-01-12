@@ -11,12 +11,16 @@ import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router/';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LinearChartComponent } from './components/linear-chart/linear-chart.component';
+import { SearchComponent } from './components/search/search.component';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     SidebarComponent,
-    LinearChartComponent
+    LinearChartComponent,
+    SearchComponent
   ],
   imports: [
     CommonModule,
@@ -28,11 +32,14 @@ import { LinearChartComponent } from './components/linear-chart/linear-chart.com
     MatListModule,
     MatMenuModule,
     FlexLayoutModule,
+    MatInputModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,
     SidebarComponent,
-    LinearChartComponent
+    LinearChartComponent,
+    SearchComponent
   ]
 })
 export class SharedModule { }

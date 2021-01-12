@@ -6,8 +6,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./articles.component.sass']
 })
 export class ArticlesComponent implements OnInit {
-  value = ""
-
   //MatPaginator Inputs
   length = 50;
   pageSize = 10;

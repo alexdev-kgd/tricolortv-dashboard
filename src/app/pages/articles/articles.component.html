@@ -1,11 +1,4 @@
-<mat-form-field id="articles__search" floatLabel="never">
-    <mat-icon aria-hidden="false" aria-label="Search" matPrefix id="search__searchIcon">search</mat-icon>
-    <input matInput type="text" [(ngModel)]="value" placeholder="Начните вводить ваш запрос">
-    <button mat-button *ngIf="value" matSuffix mat-icon-button (click)="value=''">search</button>
-    <button mat-icon-button matSuffix>
-        <mat-icon>filter_alt</mat-icon>
-    </button>
-</mat-form-field>
+<app-search></app-search>
 <div id="articles__params">
     <mat-form-field id="datepicker" floatLabel="never">
         <mat-icon aria-hidden="false" aria-label="Calendar" matPrefix id="datepicker__calendarIcon">calendar_today</mat-icon>
