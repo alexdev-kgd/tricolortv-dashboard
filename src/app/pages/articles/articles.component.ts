@@ -1,12 +1,11 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { PaginatorLabelService } from 'src/app/shared/services/paginator-label.service';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-articles',
   templateUrl: './articles.component.html',
   styleUrls: ['./articles.component.sass']
 })
-export class ArticlesComponent implements AfterViewInit {
+export class ArticlesComponent implements OnInit {
   value = ""
 
   //MatPaginator Inputs
@@ -15,7 +14,7 @@ export class ArticlesComponent implements AfterViewInit {
 
   constructor() { }
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
 
   }
 }
