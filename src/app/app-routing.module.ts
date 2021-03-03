@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { DefaultComponent } from './layouts/default/default.component';
 import { ArticlesComponent } from './pages/articles/articles.component';
 import { HomeComponent } from './pages/home/home.component';
+import { StaffComponent } from './pages/staff/staff.component';
 import { StatisticsComponent } from './pages/statistics/statistics.component';
 
 const routes: Routes = [{
@@ -24,6 +25,10 @@ const routes: Routes = [{
     path: 'articles',
     component: ArticlesComponent,
     data: { animation: 'ArticlesPage' }
+  }, {
+    path: 'staff',
+    component: StaffComponent,
+    data: { animation: 'StaffPage' }
   }]
 }];
 

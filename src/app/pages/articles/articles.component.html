@@ -1,14 +1,6 @@
 <app-search></app-search>
 <div id="articles__params">
-    <mat-form-field id="datepicker" floatLabel="never">
-        <mat-icon aria-hidden="false" aria-label="Calendar" matPrefix id="datepicker__calendarIcon">calendar_today</mat-icon>
-        <mat-label>Выберите дату</mat-label>
-        <input matInput [matDatepicker]="picker1">
-        <mat-datepicker #picker1></mat-datepicker>
-        <mat-datepicker-toggle matSuffix [for]="picker1">
-            <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
-        </mat-datepicker-toggle>
-    </mat-form-field>
+    <app-datepicker></app-datepicker>
     <mat-paginator [length]="length"
                     [pageSize]="pageSize">
     </mat-paginator>

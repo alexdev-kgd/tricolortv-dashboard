@@ -1,8 +1,16 @@
 <mat-form-field id="articles__search" floatLabel="never">
     <mat-icon aria-hidden="false" aria-label="Search" matPrefix id="search__searchIcon">search</mat-icon>
     <input matInput type="text" [(ngModel)]="value" placeholder="Начните вводить ваш запрос">
-    <button mat-button *ngIf="value" matSuffix mat-icon-button (click)="value=''">search</button>
-    <button mat-icon-button matSuffix>
+    <button mat-button *ngIf="value" matSuffix mat-icon-button (click)="value=''"></button>
+    <button mat-icon-button matSuffix id="search__filterBtn" #filterBtn="matMenuTrigger"
+            [matMenuTriggerFor]="filterDropdown">
         <mat-icon>filter_alt</mat-icon>
     </button>
 </mat-form-field>
+<mat-menu #filterDropdown="matMenu" [overlapTrigger]="false" id="search__menu">
+	<div (click)="cancelClick($event)" id="filter__dropdown">
+        <mat-checkbox>First Option</mat-checkbox>
+        <mat-checkbox>Second Option</mat-checkbox>
+        <mat-checkbox>Third Option</mat-checkbox>
+    </div>
+</mat-menu>

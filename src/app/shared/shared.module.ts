@@ -13,14 +13,19 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { LinearChartComponent } from './components/linear-chart/linear-chart.component';
 import { SearchComponent } from './components/search/search.component';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { DatepickerComponent } from './components/datepicker/datepicker.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     SidebarComponent,
     LinearChartComponent,
-    SearchComponent
+    SearchComponent,
+    DatepickerComponent
   ],
   imports: [
     CommonModule,
@@ -33,13 +38,18 @@ import { FormsModule } from '@angular/forms';
     MatMenuModule,
     FlexLayoutModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
   ],
   exports: [
     HeaderComponent,
     SidebarComponent,
     LinearChartComponent,
-    SearchComponent
+    SearchComponent,
+    DatepickerComponent
   ]
 })
 export class SharedModule { }
