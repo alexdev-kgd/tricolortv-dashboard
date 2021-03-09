@@ -1,23 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './components/header/header.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatListModule } from '@angular/material/list'; 
+import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router/';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { LinearChartComponent } from './components/linear-chart/linear-chart.component';
-import { SearchComponent } from './components/search/search.component';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { DatepickerComponent } from './components/datepicker/datepicker.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { DatepickerComponent } from './components/datepicker/datepicker.component';
+import { SearchComponent } from './components/search/search.component';
+import { LinearChartComponent } from './components/linear-chart/linear-chart.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     SidebarComponent,
     LinearChartComponent,
     SearchComponent,
-    DatepickerComponent
+    DatepickerComponent,
   ],
   imports: [
     CommonModule,
@@ -49,7 +49,7 @@ import { MatNativeDateModule } from '@angular/material/core';
     SidebarComponent,
     LinearChartComponent,
     SearchComponent,
-    DatepickerComponent
-  ]
+    DatepickerComponent,
+  ],
 })
 export class SharedModule { }

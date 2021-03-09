@@ -20,6 +20,7 @@ import { ArticlesComponent } from 'src/app/pages/articles/articles.component';
 
 import { PaginatorLabelService } from 'src/app/shared/services/paginator-label.service';
 import { StaffComponent } from 'src/app/pages/staff/staff.component';
+import { ModulesComponent } from 'src/app/pages/modules/modules.component';
 import { DefaultComponent } from './default.component';
 
 @NgModule({
@@ -29,6 +30,7 @@ import { DefaultComponent } from './default.component';
     StatisticsComponent,
     ArticlesComponent,
     StaffComponent,
+    ModulesComponent,
   ],
   imports: [
     CommonModule,

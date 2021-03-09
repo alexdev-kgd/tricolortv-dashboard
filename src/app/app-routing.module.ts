@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { DefaultComponent } from './layouts/default/default.component';
 import { ArticlesComponent } from './pages/articles/articles.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ModulesComponent } from './pages/modules/modules.component';
 import { StaffComponent } from './pages/staff/staff.component';
 import { StatisticsComponent } from './pages/statistics/statistics.component';
 
@@ -12,28 +13,32 @@ const routes: Routes = [{
   children: [{
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   }, {
     path: 'home',
     component: HomeComponent,
-    data: { animation: 'HomePage' }
+    data: { animation: 'HomePage' },
   }, {
     path: 'stats',
     component: StatisticsComponent,
-    data: { animation: 'StatsPage' }
+    data: { animation: 'StatsPage' },
   }, {
     path: 'articles',
     component: ArticlesComponent,
-    data: { animation: 'ArticlesPage' }
+    data: { animation: 'ArticlesPage' },
   }, {
     path: 'staff',
     component: StaffComponent,
-    data: { animation: 'StaffPage' }
-  }]
+    data: { animation: 'StaffPage' },
+  }, {
+    path: 'modules',
+    component: ModulesComponent,
+    data: { animation: 'ModulesPage' },
+  }],
 }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }
