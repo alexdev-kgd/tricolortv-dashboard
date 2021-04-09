@@ -52,6 +52,42 @@ mat-card, #datepicker, mat-paginator
                 font-size: 12px
                 color: #ccc
 
+#section__params
+    width: 100%
+    margin-top: 30px
+    display: inline-flex
+    justify-content: flex-end
+
+    mat-paginator
+        height: 50px
+        padding: 5px 15px
+        border-radius: 50px
+        box-sizing: border-box
+        font-size: 14px
+    
+    .mat-paginator
+
+        ::ng-deep .mat-paginator-page-size
+            display: none !important
+
+        ::ng-deep .mat-paginator-container
+            min-height: auto
+            justify-content: center
+
+        ::ng-deep .mat-paginator-range-label
+            order: 2
+
+        ::ng-deep .mat-paginator-range-actions
+            width: 100%
+            align-items: center
+            justify-content: space-between
+            
+            .mat-focus-indicator:nth-child(2)
+                order: 1
+
+            .mat-focus-indicator:nth-child(3)
+                order: 3
+
 #articles__container
     width: 100%
     margin-top: 30px

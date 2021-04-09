@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DefaultComponent } from './layouts/default/default.component';
 import { ArticlesComponent } from './pages/articles/articles.component';
+import { CommentsComponent } from './pages/comments/comments.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ModulesComponent } from './pages/modules/modules.component';
 import { StaffComponent } from './pages/staff/staff.component';
@@ -34,6 +35,10 @@ const routes: Routes = [{
     path: 'modules',
     component: ModulesComponent,
     data: { animation: 'ModulesPage' },
+  }, {
+    path: 'comments',
+    component: CommentsComponent,
+    data: { animation: 'CommentsPage' },
   }],
 }];
 

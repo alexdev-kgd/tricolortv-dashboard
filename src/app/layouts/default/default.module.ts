@@ -18,9 +18,9 @@ import { HomeComponent } from 'src/app/pages/home/home.component';
 import { StatisticsComponent } from 'src/app/pages/statistics/statistics.component';
 import { ArticlesComponent } from 'src/app/pages/articles/articles.component';
 
-import { PaginatorLabelService } from 'src/app/shared/services/paginator-label.service';
 import { StaffComponent } from 'src/app/pages/staff/staff.component';
 import { ModulesComponent } from 'src/app/pages/modules/modules.component';
+import { CommentsComponent } from 'src/app/pages/comments/comments.component';
 import { DefaultComponent } from './default.component';
 
 @NgModule({
@@ -31,6 +31,7 @@ import { DefaultComponent } from './default.component';
     ArticlesComponent,
     StaffComponent,
     ModulesComponent,
+    CommentsComponent,
   ],
   imports: [
     CommonModule,
@@ -48,9 +49,6 @@ import { DefaultComponent } from './default.component';
     MatIconModule,
     MatCheckboxModule,
   ],
-  providers: [{
-    provide: MatPaginatorIntl,
-    useClass: PaginatorLabelService,
-  }],
+  providers: [],
 })
 export class DefaultModule { }

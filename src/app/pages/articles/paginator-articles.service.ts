@@ -1,22 +1,12 @@
 import { Injectable } from '@angular/core';
-import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
-
+import { MatPaginatorIntl } from '@angular/material/paginator';
 
 @Injectable({
   providedIn: 'root'
 })
-export class PaginatorLabelService extends MatPaginatorIntl {
-
+export class PaginatorArticlesService extends MatPaginatorIntl {
   constructor() {
     super();
-  }
-
-  translateMatPaginator = (paginator: MatPaginator) => {
-    paginator._intl.firstPageLabel = '<custom label here>';
-    paginator._intl.itemsPerPageLabel = '<custom label here>';
-    paginator._intl.lastPageLabel = '<custom label here>';
-    paginator._intl.nextPageLabel = '<custom label here>';
-    paginator._intl.previousPageLabel = '<custom label here>';
   }
 
   getRangeLabel = (page: number, pageSize: number, length: number) =>  {
