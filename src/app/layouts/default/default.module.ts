@@ -22,6 +22,7 @@ import { StaffComponent } from 'src/app/pages/staff/staff.component';
 import { ModulesComponent } from 'src/app/pages/modules/modules.component';
 import { CommentsComponent } from 'src/app/pages/comments/comments.component';
 import { DefaultComponent } from './default.component';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { DefaultComponent } from './default.component';
     FormsModule,
     MatIconModule,
     MatCheckboxModule,
+    MatMenuModule
   ],
   providers: [],
 })

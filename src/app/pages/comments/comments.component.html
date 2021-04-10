@@ -1,1 +1,275 @@
-<p>comments works!</p>
+<div id="section__params">
+    <app-datepicker></app-datepicker>
+    <mat-paginator  [length]="length"
+                    [pageSize]="pageSize">
+    </mat-paginator>
+</div>
+<div id="comments__container">
+    <mat-card class="comment">
+        <mat-card-title>
+            <span id="comment__avatar"></span>
+            <span id="comment__title">Александр Абдулаев</span>
+            <span id="comment__date">15.06.19 16:30</span>
+            <span id="comment__location">в статье <a href="">Как настроить антенну Триколор ТВ</a></span>
+            <button mat-icon-button [matMenuTriggerFor]="menu" id="comment__menu-btn" aria-label="Comment options">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <span>Ответить</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Редактировать</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Удалить</span>
+                </button>
+            </mat-menu>                       
+        </mat-card-title>
+        <mat-card-content>
+            <p>Триколор — это самый крупный оператор цифрового спутникового телевидения в России, 
+            осуществляющий с конца 2005 года цифровое вещание пакета телевизионных каналов 
+            на европейскую часть страны, а также территории Сибирского, Уральского и части 
+            Дальневосточного округов.</p>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="comment">
+        <mat-card-title>
+            <span id="comment__avatar"></span>
+            <span id="comment__title">Иван Иванов</span>
+            <span id="comment__date">15.06.19 16:30</span>
+            <span id="comment__location">в статье <a href="">Как настроить антенну Триколор ТВ</a></span>
+            <button mat-icon-button [matMenuTriggerFor]="menu" id="comment__menu-btn" aria-label="Comment options">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <span>Ответить</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Редактировать</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Удалить</span>
+                </button>
+            </mat-menu>                       
+        </mat-card-title>
+        <mat-card-content>
+            <p>Maecenas aliquet diam felis, in facilisis metus efficitur at. 
+                Vestibulum eu lectus vehicula, bibendum ante id, vehicula nunc. 
+                Praesent nisl magna, eleifend nec volutpat tempor, molestie a leo. 
+                Nullam ac placerat erat, eu placerat purus. Maecenas semper nulla tellus, 
+                vitae porta purus dictum a. Vestibulum a nunc rutrum, porta ligula at, sollicitudin augue. 
+                Sed a felis id lectus rhoncus sodales. Sed interdum, lacus non iaculis ornare, dolor lacus 
+                laoreet est, vulputate pellentesque magna arcu sit amet purus. 
+                Praesent vulputate, leo ut consectetur dignissim, purus nisl accumsan felis, 
+                a commodo enim justo non dui. Nunc pharetra rutrum tortor, eget efficitur eros accumsan vel. 
+                Suspendisse dignissim leo at diam bibendum, sit amet aliquet ipsum bibendum. 
+                Cras volutpat libero quis velit varius, vel elementum nibh scelerisque. 
+                Morbi id tristique metus. Vivamus vulputate pretium magna, sit amet ornare quam lacinia nec. </p>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="comment">
+        <mat-card-title>
+            <span id="comment__avatar"></span>
+            <span id="comment__title">Александр Абдулаев</span>
+            <span id="comment__date">15.06.19 16:30</span>
+            <span id="comment__location">в статье <a href="">Как настроить антенну Триколор ТВ</a></span>
+            <button mat-icon-button [matMenuTriggerFor]="menu" id="comment__menu-btn" aria-label="Comment options">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <span>Ответить</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Редактировать</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Удалить</span>
+                </button>
+            </mat-menu>                       
+        </mat-card-title>
+        <mat-card-content>
+            <p>Триколор — это самый крупный оператор цифрового спутникового телевидения в России.</p>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="comment">
+        <mat-card-title>
+            <span id="comment__avatar"></span>
+            <span id="comment__title">Александр Абдулаев</span>
+            <span id="comment__date">15.06.19 16:30</span>
+            <span id="comment__location">в статье <a href="">Как настроить антенну Триколор ТВ</a></span>
+            <button mat-icon-button [matMenuTriggerFor]="menu" id="comment__menu-btn" aria-label="Comment options">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <span>Ответить</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Редактировать</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Удалить</span>
+                </button>
+            </mat-menu>                       
+        </mat-card-title>
+        <mat-card-content>
+            <p>Триколор — это самый крупный оператор цифрового спутникового телевидения в России, 
+            осуществляющий с конца 2005 года цифровое вещание пакета телевизионных каналов 
+            на европейскую часть страны, а также территории Сибирского, Уральского и части 
+            Дальневосточного округов.</p>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="comment">
+        <mat-card-title>
+            <span id="comment__avatar"></span>
+            <span id="comment__title">Иван Иванов</span>
+            <span id="comment__date">15.06.19 16:30</span>
+            <span id="comment__location">в статье <a href="">Как настроить антенну Триколор ТВ</a></span>
+            <button mat-icon-button [matMenuTriggerFor]="menu" id="comment__menu-btn" aria-label="Comment options">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <span>Ответить</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Редактировать</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Удалить</span>
+                </button>
+            </mat-menu>                       
+        </mat-card-title>
+        <mat-card-content>
+            <p>Maecenas aliquet diam felis, in facilisis metus efficitur at. 
+                Vestibulum eu lectus vehicula, bibendum ante id, vehicula nunc. 
+                Praesent nisl magna, eleifend nec volutpat tempor, molestie a leo. 
+                Nullam ac placerat erat, eu placerat purus. Maecenas semper nulla tellus, 
+                vitae porta purus dictum a. Vestibulum a nunc rutrum, porta ligula at, sollicitudin augue. 
+                Sed a felis id lectus rhoncus sodales. Sed interdum, lacus non iaculis ornare, dolor lacus 
+                laoreet est, vulputate pellentesque magna arcu sit amet purus. 
+                Praesent vulputate, leo ut consectetur dignissim, purus nisl accumsan felis, 
+                a commodo enim justo non dui. Nunc pharetra rutrum tortor, eget efficitur eros accumsan vel. 
+                Suspendisse dignissim leo at diam bibendum, sit amet aliquet ipsum bibendum. 
+                Cras volutpat libero quis velit varius, vel elementum nibh scelerisque. 
+                Morbi id tristique metus. Vivamus vulputate pretium magna, sit amet ornare quam lacinia nec. </p>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="comment">
+        <mat-card-title>
+            <span id="comment__avatar"></span>
+            <span id="comment__title">Александр Абдулаев</span>
+            <span id="comment__date">15.06.19 16:30</span>
+            <span id="comment__location">в статье <a href="">Как настроить антенну Триколор ТВ</a></span>
+            <button mat-icon-button [matMenuTriggerFor]="menu" id="comment__menu-btn" aria-label="Comment options">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <span>Ответить</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Редактировать</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Удалить</span>
+                </button>
+            </mat-menu>                       
+        </mat-card-title>
+        <mat-card-content>
+            <p>Триколор — это самый крупный оператор цифрового спутникового телевидения в России.</p>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="comment">
+        <mat-card-title>
+            <span id="comment__avatar"></span>
+            <span id="comment__title">Александр Абдулаев</span>
+            <span id="comment__date">15.06.19 16:30</span>
+            <span id="comment__location">в статье <a href="">Как настроить антенну Триколор ТВ</a></span>
+            <button mat-icon-button [matMenuTriggerFor]="menu" id="comment__menu-btn" aria-label="Comment options">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <span>Ответить</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Редактировать</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Удалить</span>
+                </button>
+            </mat-menu>                       
+        </mat-card-title>
+        <mat-card-content>
+            <p>Триколор — это самый крупный оператор цифрового спутникового телевидения в России, 
+            осуществляющий с конца 2005 года цифровое вещание пакета телевизионных каналов 
+            на европейскую часть страны, а также территории Сибирского, Уральского и части 
+            Дальневосточного округов.</p>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="comment">
+        <mat-card-title>
+            <span id="comment__avatar"></span>
+            <span id="comment__title">Иван Иванов</span>
+            <span id="comment__date">15.06.19 16:30</span>
+            <span id="comment__location">в статье <a href="">Как настроить антенну Триколор ТВ</a></span>
+            <button mat-icon-button [matMenuTriggerFor]="menu" id="comment__menu-btn" aria-label="Comment options">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <span>Ответить</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Редактировать</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Удалить</span>
+                </button>
+            </mat-menu>                       
+        </mat-card-title>
+        <mat-card-content>
+            <p>Maecenas aliquet diam felis, in facilisis metus efficitur at. 
+                Vestibulum eu lectus vehicula, bibendum ante id, vehicula nunc. 
+                Praesent nisl magna, eleifend nec volutpat tempor, molestie a leo. 
+                Nullam ac placerat erat, eu placerat purus. Maecenas semper nulla tellus, 
+                vitae porta purus dictum a. Vestibulum a nunc rutrum, porta ligula at, sollicitudin augue. 
+                Sed a felis id lectus rhoncus sodales. Sed interdum, lacus non iaculis ornare, dolor lacus 
+                laoreet est, vulputate pellentesque magna arcu sit amet purus. 
+                Praesent vulputate, leo ut consectetur dignissim, purus nisl accumsan felis, 
+                a commodo enim justo non dui. Nunc pharetra rutrum tortor, eget efficitur eros accumsan vel. 
+                Suspendisse dignissim leo at diam bibendum, sit amet aliquet ipsum bibendum. 
+                Cras volutpat libero quis velit varius, vel elementum nibh scelerisque. 
+                Morbi id tristique metus. Vivamus vulputate pretium magna, sit amet ornare quam lacinia nec. </p>
+        </mat-card-content>
+    </mat-card>
+    <mat-card class="comment">
+        <mat-card-title>
+            <span id="comment__avatar"></span>
+            <span id="comment__title">Александр Абдулаев</span>
+            <span id="comment__date">15.06.19 16:30</span>
+            <span id="comment__location">в статье <a href="">Как настроить антенну Триколор ТВ</a></span>
+            <button mat-icon-button [matMenuTriggerFor]="menu" id="comment__menu-btn" aria-label="Comment options">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <span>Ответить</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Редактировать</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Удалить</span>
+                </button>
+            </mat-menu>                       
+        </mat-card-title>
+        <mat-card-content>
+            <p>Триколор — это самый крупный оператор цифрового спутникового телевидения в России.</p>
+        </mat-card-content>
+    </mat-card>
+</div>
