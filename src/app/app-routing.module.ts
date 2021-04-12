@@ -5,6 +5,7 @@ import { ArticlesComponent } from './pages/articles/articles.component';
 import { CommentsComponent } from './pages/comments/comments.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ModulesComponent } from './pages/modules/modules.component';
+import { SettingsComponent } from './pages/settings/settings.component';
 import { StaffComponent } from './pages/staff/staff.component';
 import { StatisticsComponent } from './pages/statistics/statistics.component';
 
@@ -39,6 +40,10 @@ const routes: Routes = [{
     path: 'comments',
     component: CommentsComponent,
     data: { animation: 'CommentsPage' },
+  }, {
+    path: 'settings',
+    component: SettingsComponent,
+    data: { animation: 'SettingsPage' },
   }],
 }];
 

@@ -18,6 +18,7 @@ import { SearchComponent } from './components/search/search.component';
 import { LinearChartComponent } from './components/linear-chart/linear-chart.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HeaderComponent } from './components/header/header.component';
+import { InputNumberComponent } from './components/input-number/input-number.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { HeaderComponent } from './components/header/header.component';
     LinearChartComponent,
     SearchComponent,
     DatepickerComponent,
+    InputNumberComponent,
   ],
   imports: [
     CommonModule,
@@ -50,6 +52,7 @@ import { HeaderComponent } from './components/header/header.component';
     LinearChartComponent,
     SearchComponent,
     DatepickerComponent,
+    InputNumberComponent,
   ],
 })
 export class SharedModule { }

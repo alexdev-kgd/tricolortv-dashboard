@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
-import { MatPaginatorIntl, MatPaginatorModule } from '@angular/material/paginator';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { HomeComponent } from 'src/app/pages/home/home.component';
 import { StatisticsComponent } from 'src/app/pages/statistics/statistics.component';
@@ -23,6 +24,7 @@ import { ModulesComponent } from 'src/app/pages/modules/modules.component';
 import { CommentsComponent } from 'src/app/pages/comments/comments.component';
 import { DefaultComponent } from './default.component';
 import { MatMenuModule } from '@angular/material/menu';
+import { SettingsComponent } from 'src/app/pages/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { MatMenuModule } from '@angular/material/menu';
     StaffComponent,
     ModulesComponent,
     CommentsComponent,
+    SettingsComponent
   ],
   imports: [
     CommonModule,
@@ -49,7 +52,8 @@ import { MatMenuModule } from '@angular/material/menu';
     FormsModule,
     MatIconModule,
     MatCheckboxModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSlideToggleModule
   ],
   providers: [],
 })
