@@ -3,14 +3,12 @@
     <input matInput type="text" [(ngModel)]="value" placeholder="Начните вводить ваш запрос">
     <button mat-button *ngIf="value" matSuffix mat-icon-button (click)="value=''"></button>
     <button mat-icon-button matSuffix id="search__filterBtn" #filterBtn="matMenuTrigger"
-            [matMenuTriggerFor]="filterDropdown">
+            [matMenuTriggerFor]="menu.matMenu">
         <mat-icon>filter_alt</mat-icon>
     </button>
 </mat-form-field>
-<mat-menu #filterDropdown="matMenu" [overlapTrigger]="false" id="search__menu">
-	<div (click)="cancelClick($event)" id="filter__dropdown">
-        <mat-checkbox>First Option</mat-checkbox>
-        <mat-checkbox>Second Option</mat-checkbox>
-        <mat-checkbox>Third Option</mat-checkbox>
-    </div>
-</mat-menu>
+<app-menu #menu [overlapTrigger]="false">
+    <mat-checkbox>First Option</mat-checkbox>
+    <mat-checkbox>Second Option</mat-checkbox>
+    <mat-checkbox>Third Option</mat-checkbox>
+</app-menu>

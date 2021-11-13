@@ -19,6 +19,7 @@ import { LinearChartComponent } from './components/linear-chart/linear-chart.com
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { InputNumberComponent } from './components/input-number/input-number.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { InputNumberComponent } from './components/input-number/input-number.com
     SearchComponent,
     DatepickerComponent,
     InputNumberComponent,
+    MenuComponent,
   ],
   imports: [
     CommonModule,
@@ -51,6 +53,7 @@ import { InputNumberComponent } from './components/input-number/input-number.com
     SidebarComponent,
     LinearChartComponent,
     SearchComponent,
+    MenuComponent,
     DatepickerComponent,
     InputNumberComponent,
   ],

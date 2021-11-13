@@ -1,23 +1,13 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatMenuTrigger } from '@angular/material/menu';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.sass']
 })
-export class SearchComponent implements OnInit {
-  value = "" // Search value
+export class SearchComponent {
+  @ViewChild(MatMenuTrigger) filterDropdownTrigger: MatMenuTrigger;
 
-  @ViewChild(MatMenuTrigger) filterDropdownTrigger: MatMenuTrigger
-
-  cancelClick = (ev: MouseEvent) => {
-    ev.stopPropagation();
-  }
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  value = ""; // Search value
 }

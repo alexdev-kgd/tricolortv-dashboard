@@ -9,7 +9,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -53,7 +53,8 @@ import { SettingsComponent } from 'src/app/pages/settings/settings.component';
     MatIconModule,
     MatCheckboxModule,
     MatMenuModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    ReactiveFormsModule
   ],
   providers: [],
 })
