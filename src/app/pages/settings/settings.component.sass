@@ -28,21 +28,40 @@
             &:last-child
                 margin-bottom: 0
 
-            mat-card-title
-                display: flex
-                align-items: center
-
-                #setting__title
-                    display: inline-block
-                    vertical-align: middle
-                    font-size: 16px
-
             mat-card-content
-                margin-top: 10px
-                margin-bottom: 0
 
                 mat-slide-toggle
+                    margin-top: 10px
                     display: block
+
+                ::ng-deep .mat-figure
+                    flex-direction: column !important
+                    justify-content: center !important
+                    align-items: stretch !important
+
+                    & > .mat-select-block:first-of-type
+                        margin-top: 0
+
+                app-section
+                    ::ng-deep .settings-section
+                        margin-top: 60px
+ 
+                    &:first-of-type ::ng-deep .settings-section
+                        margin-top: 0
+
+                .mat-select-block
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    margin-top: 20px
+                    width: 60%
+
+                    &__label
+                        margin-right: 40px
+                        white-space: nowrap
+
+                    ::ng-deep .mat-form-field-wrapper
+                        margin-bottom: -1.25em
 
             mat-card-footer
                 padding: 10px 15px

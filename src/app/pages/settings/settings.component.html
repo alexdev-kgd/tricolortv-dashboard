@@ -1,15 +1,74 @@
 <div id="settings__container">
     <mat-card class="setting">
-        <mat-card-title>
-            <span id="setting__title">Основные настройки</span>                     
-        </mat-card-title>
         <mat-card-content>
-            <mat-slide-toggle>Ночная тема</mat-slide-toggle>
-            <mat-slide-toggle>Включить анимации</mat-slide-toggle>
-            <div id="input-font-container">
-                <span id="input-font-container__title">Размер шрифта</span>
-                <input-number></input-number>
-            </div>
+            <app-section>
+                <ng-container title>Основные настройки</ng-container>
+                <ng-container content>
+                    <div class="settings-section__child-container">
+                        <mat-slide-toggle>Ночная тема</mat-slide-toggle>
+                        <mat-slide-toggle>Включить анимации</mat-slide-toggle>
+                    </div>
+                    <div class="settings-section__child-container">
+                        <div id="input-font-container">
+                            <span id="input-font-container__title">Размер шрифта</span>
+                            <input-number></input-number>
+                        </div>
+                    </div>
+                </ng-container>
+            </app-section>
+            <app-section>
+                <ng-container title>Производительность</ng-container>
+                <ng-container content>
+                    <div class="grid-gap-container settings-section__child-container">
+                        <div class="mat-select-block">
+                            <div class="mat-select-block__label">Количество статей на страницу</div>
+                            <mat-form-field appearance="fill">
+                                <mat-select>
+                                    <mat-option value="20">20</mat-option>
+                                    <mat-option value="40">40</mat-option>
+                                    <mat-option value="50">50</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="mat-select-block">
+                            <span class="mat-select-block__label">Количество сотрудников на страницу</span>
+                            <mat-form-field appearance="fill">
+                                <mat-select>
+                                    <mat-option value="20">20</mat-option>
+                                    <mat-option value="40">40</mat-option>
+                                    <mat-option value="50">50</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="mat-select-block">
+                            <span class="mat-select-block__label">Количество модулей на страницу</span>
+                            <mat-form-field appearance="fill">
+                                <mat-select>
+                                    <mat-option value="20">20</mat-option>
+                                    <mat-option value="40">40</mat-option>
+                                    <mat-option value="50">50</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </ng-container>
+            </app-section>
+            <app-section>
+                <ng-container title>Интерфейс</ng-container>
+                <ng-container content>
+                    <div class="grid-gap-container settings-section__child-container">
+                        <div class="mat-select-block">
+                            <span class="mat-select-block__label">Язык интерфейса</span>
+                            <mat-form-field appearance="fill">
+                                <mat-select>
+                                    <mat-option value="20">Русский</mat-option>
+                                    <mat-option value="40">Английский</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </ng-container>
+            </app-section>
         </mat-card-content>
     </mat-card>
 </div>

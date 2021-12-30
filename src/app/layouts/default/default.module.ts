@@ -18,13 +18,15 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HomeComponent } from 'src/app/pages/home/home.component';
 import { StatisticsComponent } from 'src/app/pages/statistics/statistics.component';
 import { ArticlesComponent } from 'src/app/pages/articles/articles.component';
-
+import { SectionComponent } from 'src/app/pages/settings/section/section.component';
+import { SettingsComponent } from 'src/app/pages/settings/settings.component';
 import { StaffComponent } from 'src/app/pages/staff/staff.component';
-import { ModulesComponent } from 'src/app/pages/modules/modules.component';
 import { CommentsComponent } from 'src/app/pages/comments/comments.component';
+
+import { ModulesComponent } from 'src/app/pages/modules/modules.component';
 import { DefaultComponent } from './default.component';
 import { MatMenuModule } from '@angular/material/menu';
-import { SettingsComponent } from 'src/app/pages/settings/settings.component';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { SettingsComponent } from 'src/app/pages/settings/settings.component';
     StaffComponent,
     ModulesComponent,
     CommentsComponent,
-    SettingsComponent
+    SettingsComponent,
+    SectionComponent,
   ],
   imports: [
     CommonModule,
@@ -50,6 +53,7 @@ import { SettingsComponent } from 'src/app/pages/settings/settings.component';
     MatInputModule,
     MatNativeDateModule,
     FormsModule,
+    MatSelectModule,
     MatIconModule,
     MatCheckboxModule,
     MatMenuModule,
