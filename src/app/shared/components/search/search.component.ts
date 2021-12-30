@@ -1,5 +1,5 @@
-import { MatMenuTrigger } from '@angular/material/menu';
 import { Component, ViewChild } from '@angular/core';
+import { MenuComponent } from '../menu/menu.component';
 
 @Component({
   selector: 'app-search',
@@ -7,7 +7,7 @@ import { Component, ViewChild } from '@angular/core';
   styleUrls: ['./search.component.sass']
 })
 export class SearchComponent {
-  @ViewChild(MatMenuTrigger) filterDropdownTrigger: MatMenuTrigger;
+  @ViewChild(MenuComponent, {static: true}) menuComponent: MenuComponent;
 
   value = ""; // Search value
 }

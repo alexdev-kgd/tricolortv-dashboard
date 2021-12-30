@@ -7,7 +7,7 @@ import { Component, Input, ViewChild } from '@angular/core';
   styleUrls: ['./menu.component.sass']
 })
 export class MenuComponent {
-  @ViewChild('menu') matMenu: MatMenu;
+  @ViewChild(MatMenu, {static: true}) menu: MatMenu;
   
   @Input() overlapTrigger;
 
