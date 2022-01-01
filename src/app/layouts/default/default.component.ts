@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { slideInAnimation } from 'src/app/shared/animations';
-import { WINDOW_SIZE } from 'src/app/shared/constants/windowSize';
+import { slideInAnimation } from '@shared/animations';
+import { WINDOW_SIZE } from '@shared/constants/windowSize';
 
 @Component({
   selector: 'app-default',

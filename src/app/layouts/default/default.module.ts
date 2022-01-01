@@ -14,19 +14,19 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-
-import { HomeComponent } from 'src/app/pages/home/home.component';
-import { StatisticsComponent } from 'src/app/pages/statistics/statistics.component';
-import { ArticlesComponent } from 'src/app/pages/articles/articles.component';
-import { SectionComponent } from 'src/app/pages/settings/section/section.component';
-import { SettingsComponent } from 'src/app/pages/settings/settings.component';
-import { StaffComponent } from 'src/app/pages/staff/staff.component';
-import { CommentsComponent } from 'src/app/pages/comments/comments.component';
-
-import { ModulesComponent } from 'src/app/pages/modules/modules.component';
-import { DefaultComponent } from './default.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
+
+import { HomeComponent } from '@pages/home/home.component';
+import { StatisticsComponent } from '@pages/statistics/statistics.component';
+import { ArticlesComponent } from '@pages/articles/articles.component';
+import { SectionComponent } from '@pages/settings/section/section.component';
+import { SettingsComponent } from '@pages/settings/settings.component';
+import { StaffComponent } from '@pages/staff/staff.component';
+import { CommentsComponent } from '@pages/comments/comments.component';
+import { ModulesComponent } from '@pages/modules/modules.component';
+
+import { DefaultComponent } from './default.component';
 
 @NgModule({
   declarations: [
