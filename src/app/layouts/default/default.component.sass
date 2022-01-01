@@ -1,3 +1,5 @@
+@import '~src/assets/sass/vars'
+
 @mixin menu-arrow
     content: ""
     position: absolute
@@ -20,6 +22,12 @@ $togglebarWidth: 30px
 
     ::ng-deep .mat-drawer-inner-container
         overflow: hidden
+
+    #toggleBar
+        display: none
+
+        @media (min-width: $tablet)
+            display: block
 
     mat-drawer
         width: $sidebarWidth

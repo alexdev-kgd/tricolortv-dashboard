@@ -1,14 +1,19 @@
 <mat-toolbar>
     <div class="header__leftSide" fxLayout="row" fxLayoutAlign="start center">
         <a href="#">
-            <img src="../../assets/img/logo.png" alt="tricolortv" id="header__logo">
+            <img src="../../assets/img/logo.png" alt="tricolortv" class="header__logo">
         </a>
-        <span id="header__title">
+        <span class="header__title">
             <h3>Admin-панель</h3>
             <p>Dashboard</p>
         </span>
     </div>
-    <div class="header__rightSide" fxFlex fxLayout="row" fxLayoutAlign="end center">
+    <div class="header__right-side" fxFlex fxLayout="row" fxLayoutAlign="end center">
+        <button mat-icon-button 
+                class="header__menu-mobile"
+                (click)="toggleSidebar()">
+            <mat-icon>menu</mat-icon>
+        </button>
         <ul fxLayout="row" fxLayoutGap="28px">
             <li>
                 <button mat-icon-button>
@@ -21,7 +26,7 @@
                 </button>
             </li>
             <li>
-                <button mat-icon-button id="rightSide__profile">
+                <button mat-icon-button id="right-side__profile">
                     <mat-icon>person_outline</mat-icon>
                     <span>Александр Абдулаев</span>
                 </button>

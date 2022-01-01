@@ -1,3 +1,5 @@
+@import '~src/assets/sass/vars'
+
 :host
 
     mat-toolbar
@@ -6,32 +8,48 @@
         background: #fff
         height: 86px
 
-        #header__logo
-            width: 210px
-            height: 52px
-            display: inline-block
+        .header
+            &__logo
+                width: 210px
+                height: 52px
+                display: inline-block
 
-        #header__title
-            margin-left: 88px
-            line-height: 15px
-            display: inline-block
+            &__title
+                display: none
+            
+                @media (min-width: $tablet)
+                    margin-left: 88px
+                    line-height: 15px
+                    display: inline-block
 
-            h3
-                font-weight: 400
-                font-size: 24px
-            p
-                font-weight: 200
-                font-size: 16px
-                margin: 0 !important
+                h3
+                    font-weight: 400
+                    font-size: 24px
+                p
+                    font-weight: 200
+                    font-size: 16px
+                    margin: 0 !important
 
-            h3, p
-                color: #004C9F
+                h3, p
+                    color: #004C9F
+
+            &__menu-mobile
+                display: block
+
+                @media (min-width: $tablet)
+                    display: none
 
     li > button
         width: auto
 
-    ul li
-        list-style: none
+    ul
+        display: none !important
+
+        @media (min-width: $tablet)
+            display: flex !important
+    
+        li
+            list-style: none
 
         span
             margin-left: 5px

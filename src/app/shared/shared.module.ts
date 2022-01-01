@@ -1,3 +1,4 @@
+import { BindClickEventDirective } from './../layouts/default/default.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
@@ -30,6 +31,7 @@ import { MenuComponent } from './components/menu/menu.component';
     DatepickerComponent,
     InputNumberComponent,
     MenuComponent,
+    BindClickEventDirective
   ],
   imports: [
     CommonModule,

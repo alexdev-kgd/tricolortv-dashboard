@@ -1,7 +1,8 @@
-<app-header></app-header>
+<app-header (showSidebar)="toggleMenu($event)"></app-header>
 
 <mat-drawer-container>
-    <mat-drawer mode="side" [opened]="menuOpened">
+    <mat-drawer mode="side" 
+                [opened]="menuOpened">
         <app-sidebar></app-sidebar>
     </mat-drawer>
     <mat-drawer-content [@routeAnimations]="prepareRoute(outlet)"
