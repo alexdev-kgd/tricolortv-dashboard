@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { slideInAnimation } from 'src/app/shared/animations';
+import { WINDOW_SIZE } from 'src/app/shared/constants/windowSize';
 
 @Component({
   selector: 'app-default',
@@ -11,12 +12,17 @@ import { slideInAnimation } from 'src/app/shared/animations';
   ]
 })
 export class DefaultComponent implements OnInit {
+  isDisabled = false;
 
   menuOpened = true;
 
-  constructor() { }
-
   ngOnInit(): void {
+    this.checkWindowSize();
+  }
+
+  checkWindowSize(): void {
+    const outerWidth = window.outerWidth;
+    outerWidth < WINDOW_SIZE.TABLET ? this.isDisabled = true : this.isDisabled = false;
   }
 
   toggleMenu() {
