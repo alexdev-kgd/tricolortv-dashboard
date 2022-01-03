@@ -45,20 +45,49 @@
                 app-section
                     ::ng-deep .settings-section
                         margin-top: 60px
+
+                        &__child-container
+                            margin: 20px 0
+
+                            &:only-child
+                                width: 100%
+
+                                @media (min-width: $tablet)
+                                    width: auto
+
+                            &:first-child
+                                margin-top: 0
+
+                            &:last-child
+                                margin-bottom: 0
+
+                            @media (min-width: $tablet)
+                                margin: 0
  
                     &:first-of-type ::ng-deep .settings-section
                         margin-top: 0
 
                 .mat-select-block
                     display: flex
-                    align-items: center
-                    justify-content: space-between
-                    margin-top: 20px
-                    width: 60%
+                    flex-direction: column
+                    margin-bottom: 20px
+
+                    @media (min-width: $tablet)
+                        align-items: center
+                        justify-content: space-between
+                        flex-direction: row
+                        margin-top: 20px
+                        margin-bottom: 0
+                        width: 60%
 
                     &__label
+                        margin-bottom: 5px
                         margin-right: 40px
-                        white-space: nowrap
+                        white-space: none
+
+                        @media (min-width: $tablet)
+                            margin-bottom: 0
+                            white-space: nowrap
 
                     ::ng-deep .mat-form-field-wrapper
                         margin-bottom: -1.25em

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +6,12 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./header.component.sass']
 })
 export class HeaderComponent {
+  @Input() menuOpened: boolean;
+
   @Output() showSidebar: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   toggleSidebar(): void {
-    this.showSidebar.emit(true);
+    this.showSidebar.emit(!this.menuOpened);
   }
 
 }

@@ -1,4 +1,5 @@
 @import "../../shared/stylesPages.sass"
+@import "~src/assets/sass/vars"
 
 :host
     width: 100%
@@ -6,6 +7,12 @@
 
     & > div:first-child
         margin-top: 0 !important
+
+    #statistics-container
+        display: none
+
+        @media (min-width: $tablet)
+            display: block
 
     .statChart
         height: 345px

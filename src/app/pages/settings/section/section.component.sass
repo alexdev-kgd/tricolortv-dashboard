@@ -1,3 +1,5 @@
+@import '~src/assets/sass/vars'
+
 :host
     .settings-section
 
@@ -9,5 +11,9 @@
 
         &__inner-container
             display: flex
+            flex-direction: column
             align-items: center
             justify-content: space-around
+
+            @media (min-width: $tablet)
+                flex-direction: row

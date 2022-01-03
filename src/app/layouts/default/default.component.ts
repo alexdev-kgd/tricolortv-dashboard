@@ -1,3 +1,4 @@
+import { MediaMatcher } from '@angular/cdk/layout';
 import { Component, Directive, ElementRef, HostListener, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { slideInAnimation } from '@shared/animations';
@@ -24,9 +25,15 @@ export class BindClickEventDirective {
   ]
 })
 export class DefaultComponent implements OnInit {
+  mobileQuery: MediaQueryList;
+
   isDisabled = false;
 
   public menuOpened = true;
+
+  constructor(private media: MediaMatcher) {
+    this.mobileQuery = this.media.matchMedia('(min-width: 768px)');
+  }
 
   ngOnInit(): void {
     this.applyDeviceConfigs();
@@ -48,11 +55,11 @@ export class DefaultComponent implements OnInit {
     return DEVICES.PC;
   }
 
-  toggleMenu(event?) {
-    this.menuOpened = !this.menuOpened;
+  toggleMenu(event?: boolean): void {
+    this.menuOpened = !this.menuOpened
   }
 
-  prepareRoute(outlet: RouterOutlet) {
+  prepareRoute(outlet: RouterOutlet): void {
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
   }
 

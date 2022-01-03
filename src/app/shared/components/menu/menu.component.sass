@@ -1,6 +1,14 @@
+@import '~src/assets/sass/vars'
+
 ::ng-deep .mat-menu-panel
     padding: 5px 15px !important
 
 ::ng-deep #menu-dropdown
     display: flex
     flex-direction: column
+
+    .mat-checkbox
+        padding: 15px 0
+
+        @media (min-width: $tablet)
+            padding: 0
