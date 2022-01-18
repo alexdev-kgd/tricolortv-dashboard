@@ -28,37 +28,7 @@
                 </button>
             </mat-menu>                       
         </mat-card-title>
-        <mat-card-content>
-            <p>Триколор — это самый крупный оператор цифрового спутникового телевидения в России, 
-            осуществляющий с конца 2005 года цифровое вещание пакета телевизионных каналов 
-            на европейскую часть страны, а также территории Сибирского, Уральского и части 
-            Дальневосточного округов.</p>
-        </mat-card-content>
-    </mat-card>
-    <mat-card class="comment">
-        <mat-card-title>
-            <span id="comment__avatar"></span>
-            <span id="comment__title">Александр Абдулаев</span>
-            <div id="comment__text-container">
-                <span id="comment__date">15.06.19 16:30</span>
-                <span id="comment__location">в статье <a href="">Как настроить антенну Триколор ТВ</a></span>
-            </div>
-            <button mat-icon-button [matMenuTriggerFor]="menu" id="comment__menu-btn" aria-label="Comment options">
-                <mat-icon>more_vert</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu">
-                <button mat-menu-item>
-                    <span>Ответить</span>
-                </button>
-                <button mat-menu-item>
-                    <span>Редактировать</span>
-                </button>
-                <button mat-menu-item>
-                    <span>Удалить</span>
-                </button>
-            </mat-menu>                       
-        </mat-card-title>
-        <mat-card-content>
+        <mat-card-content [ngClass]="fontSizeValue">
             <p>Триколор — это самый крупный оператор цифрового спутникового телевидения в России, 
             осуществляющий с конца 2005 года цифровое вещание пакета телевизионных каналов 
             на европейскую часть страны, а также территории Сибирского, Уральского и части 

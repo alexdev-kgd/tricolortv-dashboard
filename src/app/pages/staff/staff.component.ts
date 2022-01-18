@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatPaginatorIntl } from '@angular/material/paginator';
+import { FontSizeService } from '@shared/services/font-size.service';
 import { PaginatorStaffService } from './paginator-staff.service';
 
 @Component({
@@ -11,9 +12,18 @@ import { PaginatorStaffService } from './paginator-staff.service';
     useClass: PaginatorStaffService
   }]
 })
-export class StaffComponent {
+export class StaffComponent implements OnInit {
   // MatPaginator Inputs
   length = 50;
 
   pageSize = 10;
+
+  fontSizeValue: string;
+
+  constructor(private fontSizeService: FontSizeService) {
+  }
+
+  ngOnInit(): void {
+    this.fontSizeValue = this.fontSizeService.getFontSizeClass();
+  }
 }

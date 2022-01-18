@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FontSizeService } from '@services/font-size.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.sass']
 })
 export class HomeComponent implements OnInit {
+  fontSizeValue: string;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private fontSizeService: FontSizeService) {
   }
 
+  ngOnInit(): void {
+    this.fontSizeValue = this.fontSizeService.getFontSizeClass();
+  }
 }

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatPaginatorIntl } from '@angular/material/paginator';
+import { FontSizeService } from '@shared/services/font-size.service';
 import { PaginatorCommentsService } from './paginator-comments.service';
 
 @Component({
@@ -11,9 +12,18 @@ import { PaginatorCommentsService } from './paginator-comments.service';
     useClass: PaginatorCommentsService
   }]
 })
-export class CommentsComponent {
+export class CommentsComponent implements OnInit {
   // MatPaginator Inputs
   length = 50;
 
   pageSize = 10;
+
+  fontSizeValue: string;
+
+  constructor(private fontSizeService: FontSizeService) {
+  }
+
+  ngOnInit(): void {
+    this.fontSizeValue = this.fontSizeService.getFontSizeClass();
+  }
 }

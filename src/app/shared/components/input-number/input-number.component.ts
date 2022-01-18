@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FontSizeService } from '@services/font-size.service';
 
 enum CALCULATING_OPERATIONS {
   DECREMENT = "DECREMENT",
@@ -20,8 +20,14 @@ export class InputNumberComponent implements OnInit {
   @Input('min') min: number;
   @Input('max') max: number;
 
+  fontSizeValue: number;
+
+  constructor(private fontSizeService: FontSizeService) {}
+
   ngOnInit(): void {
       this.numberInput.nativeElement.value = DEFAULT_FONT_SIZE;
+
+      this.fontSizeValue = +localStorage.getItem('fontSize') || 14;
   }
 
   public calculateNumber(operation: CALCULATING_OPERATIONS, predicate): void {
@@ -41,6 +47,8 @@ export class InputNumberComponent implements OnInit {
     }
     
     this.numberInput.nativeElement.value = value;
+    localStorage.setItem('fontSize', value);
+    this.fontSizeService.fontSize.next(value);
   }
 
   public decrementNumber() {

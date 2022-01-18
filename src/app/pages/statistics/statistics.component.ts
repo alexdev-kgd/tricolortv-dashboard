@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FontSizeService } from '@shared/services/font-size.service';
 
 @Component({
   selector: 'app-statistics',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./statistics.component.sass']
 })
 export class StatisticsComponent implements OnInit {
+  fontSizeValue: string;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private fontSizeService: FontSizeService) {
   }
 
+  ngOnInit(): void {
+    this.fontSizeValue = this.fontSizeService.getFontSizeClass();
+  }
 }

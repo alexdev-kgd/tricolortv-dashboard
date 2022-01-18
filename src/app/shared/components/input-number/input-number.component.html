@@ -2,6 +2,7 @@
     <span class="input-number__decrement" #decrement (click)="decrementNumber()">-</span>
     <input type="text" class="input-number__field" min="min" 
                                                    max="max"
+                                                   [value]="fontSizeValue"
                                                    #numberInput>
     <span class="input-number__increment" #increment (click)="incrementNumber()">+</span> 
 </div>
