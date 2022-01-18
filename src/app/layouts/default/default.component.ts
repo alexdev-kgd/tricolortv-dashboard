@@ -3,6 +3,7 @@ import { Component, Directive, ElementRef, HostListener, OnInit } from '@angular
 import { RouterOutlet } from '@angular/router';
 import { slideInAnimation } from '@shared/animations';
 import { DEVICES, WINDOW_SIZE } from '@shared/constants/windowSize';
+import { AnimationsService } from '@services/animations.service';
 
 @Directive({
   selector: '[sidebarLink]'
@@ -27,24 +28,25 @@ export class BindClickEventDirective {
 export class DefaultComponent implements OnInit {
   mobileQuery: MediaQueryList;
 
-  isDisabled = false;
+  isDisabled: boolean;
 
   public menuOpened = true;
 
-  constructor(private media: MediaMatcher) {
+  constructor(private media: MediaMatcher, private animationsService: AnimationsService) {
     this.mobileQuery = this.media.matchMedia('(min-width: 768px)');
   }
 
   ngOnInit(): void {
     this.applyDeviceConfigs();
+    this.animationsService.isAnimationsDisabled.subscribe((bool) => this.isDisabled = bool);
   }
 
   applyDeviceConfigs(): void {
-    if(this.checkWindowSize() === DEVICES.TABLET) { 
-      this.isDisabled = true;
+    if(this.checkWindowSize() === DEVICES.TABLET) {
+      this.animationsService.isAnimationsDisabled.next(true); 
       this.menuOpened = false;
     } else {
-      this.isDisabled = false;
+      this.animationsService.isAnimationsDisabled.next(false); 
       this.menuOpened = true;
     }
   }

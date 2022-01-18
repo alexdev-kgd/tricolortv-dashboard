@@ -5,10 +5,10 @@
                 <ng-container title>Основные настройки</ng-container>
                 <ng-container content>
                     <div class="settings-section__child-container">
-                        <mat-slide-toggle #themeToggle
-                                          [checked]="toggleThemeChecked"
+                        <mat-slide-toggle [checked]="toggleThemeChecked"
                                           (change)="toggleTheme()">Ночная тема</mat-slide-toggle>
-                        <mat-slide-toggle>Включить анимации</mat-slide-toggle>
+                        <mat-slide-toggle [checked]="toggleAnimationsChecked"
+                                          (change)="toggleAnimations($event)">Включить анимации</mat-slide-toggle>
                     </div>
                     <div class="settings-section__child-container">
                         <div id="input-font-container">
