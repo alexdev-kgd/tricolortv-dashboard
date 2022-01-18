@@ -1,0 +1,98 @@
+@mixin light-theme {
+  app-search,
+  app-datepicker {
+    mat-form-field {
+      background-color: #fff;
+    }
+  }
+
+  #toggleBar {
+    background-color: #f4f4f4;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+
+  .header {
+    &__title {
+      color: #004c9f;
+    }
+  }
+
+  #right-side {
+    &__li:hover {
+      color: #9b9b9b;
+    }
+  }
+
+  #sidebar {
+    &__link {
+      color: #898989;
+
+      .list-item-active {
+        color: #000;
+        background-color: #f4f4f4;
+      }
+    }
+
+    &__copyright {
+      color: #c7c7c7;
+    }
+  }
+
+  #article {
+    &__title {
+      color: #004c9f;
+    }
+  }
+
+  #smallStats__container mat-card mat-footer,
+  .staff__container {
+    mat-card-title {
+      color: #000;
+    }
+    mat-card-subtitle {
+      color: #898989;
+    }
+  }
+
+  #comments__container #comment {
+    &__date,
+    &__location {
+      color: #898989;
+    }
+    &__location a {
+      color: #000;
+    }
+  }
+
+  #articles__container,
+  #module {
+    button {
+      background-color: #004c9f;
+      color: #fff;
+
+      &:hover {
+        background-color: #004187;
+      }
+    }
+  }
+
+  .input-number {
+    &__decrement,
+    &__increment {
+      background-color: #f1f1f1;
+      color: #000;
+
+      &:active {
+        background-color: $text-color-dark-theme;
+      }
+    }
+
+    &__field {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+}

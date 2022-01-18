@@ -5,7 +5,9 @@
                 <ng-container title>Основные настройки</ng-container>
                 <ng-container content>
                     <div class="settings-section__child-container">
-                        <mat-slide-toggle>Ночная тема</mat-slide-toggle>
+                        <mat-slide-toggle #themeToggle
+                                          [checked]="toggleThemeChecked"
+                                          (change)="toggleTheme()">Ночная тема</mat-slide-toggle>
                         <mat-slide-toggle>Включить анимации</mat-slide-toggle>
                     </div>
                     <div class="settings-section__child-container">

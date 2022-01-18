@@ -1,7 +1,14 @@
-<mat-toolbar>
+<mat-toolbar color="primary">
     <div class="header__leftSide" fxLayout="row" fxLayoutAlign="start center">
         <a href="#">
-            <img src="../../assets/img/logo.png" alt="tricolortv" class="header__logo">
+            <img *ngIf="!isDarkMode"
+                  src="../../assets/img/logo.png"
+                  alt="tricolortv"
+                  class="header__logo">
+            <img *ngIf="isDarkMode"
+                  src="../../assets/img/logo_light.png"
+                  alt="tricolortv"
+                  class="header__logo">
         </a>
         <span class="header__title">
             <h3>Admin-панель</h3>
@@ -14,25 +21,25 @@
                 (click)="toggleSidebar()">
             <mat-icon>menu</mat-icon>
         </button>
-        <ul fxLayout="row" fxLayoutGap="28px">
-            <li>
-                <button mat-icon-button>
+        <ul fxLayout="row" fxLayoutGap="28px" class="right-side__ul">
+            <li id="right-side__li">
+                <button mat-icon-button color="accent">
                     <mat-icon>mail outline</mat-icon>
                 </button>
             </li>
-            <li>
-                <button mat-icon-button>
+            <li id="right-side__li">
+                <button mat-icon-button color="accent">
                     <mat-icon>notifications</mat-icon>
                 </button>
             </li>
-            <li>
-                <button mat-icon-button id="right-side__profile">
+            <li id="right-side__li">
+                <button mat-icon-button id="right-side__profile" color="accent">
                     <mat-icon>person_outline</mat-icon>
                     <span>Александр Абдулаев</span>
                 </button>
             </li>
-            <li>
-                <button mat-icon-button>
+            <li id="right-side__li">
+                <button mat-icon-button color="accent">
                     <mat-icon>exit_to_app</mat-icon>
                 </button>
             </li>

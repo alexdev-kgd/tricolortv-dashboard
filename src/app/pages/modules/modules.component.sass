@@ -12,9 +12,14 @@
         margin-top: 0 !important
 
     .modules__container
-        display: flex
-        flex-wrap: wrap
-        justify-content: space-around
+        display: grid
+        grid-template-columns: 335px 335px
+        justify-items: stretch
+        justify-content: center
+        grid-gap: 55px
+        // display: flex
+        // flex-wrap: wrap
+        // justify-content: space-around
         margin-top: 30px
 
     mat-card
@@ -41,15 +46,10 @@
 
         button
             border-radius: 0
-            background: #004C9F
             padding: 10px 25px
             text-transform: uppercase
             font-size: 14px
-            color: #fff
             line-height: 14px
-
-            &:hover
-                background: #004187
 
     mat-card-title,
     mat-card-subtitle
