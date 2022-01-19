@@ -4,37 +4,18 @@
     </mat-paginator>
 </div>
 <div class="staff__container">
-    <mat-card>
+    <mat-card *ngFor="let person of obs | async">
         <mat-card-content>
-            <img src="assets/img/person.jpg" class="staff__image">
+            <img src="{{ person.photo }}" class="staff__image">
         </mat-card-content>
         <mat-divider></mat-divider>
         <mat-card-footer>
             <span class="staff__text">
                 <mat-card-title [ngClass]="fontSizeValue">
-                    Иван Иванов
+                    {{ person.firstName }} {{ person.lastName }}
                 </mat-card-title>
                 <mat-card-subtitle [ngClass]="fontSizeValue">
-                    Дилер компании "Триколор ТВ"
-                </mat-card-subtitle>
-            </span>
-            <button mat-icon-button class="staff__arrow">
-                <mat-icon>arrow_forward</mat-icon>
-            </button>
-        </mat-card-footer>
-    </mat-card>
-    <mat-card>
-        <mat-card-content>
-            <img src="assets/img/person.jpg" class="staff__image">
-        </mat-card-content>
-        <mat-divider></mat-divider>
-        <mat-card-footer>
-            <span class="staff__text">
-                <mat-card-title [ngClass]="fontSizeValue">
-                    Иван Иванов
-                </mat-card-title>
-                <mat-card-subtitle [ngClass]="fontSizeValue">
-                    Дилер компании "Триколор ТВ"
+                    {{ person.occupy }}
                 </mat-card-subtitle>
             </span>
             <button mat-icon-button class="staff__arrow">

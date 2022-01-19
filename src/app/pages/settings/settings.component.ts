@@ -12,6 +12,14 @@ export class SettingsComponent implements OnInit {
 
   toggleAnimationsChecked: boolean;
 
+  articlesCountValue;
+
+  staffCountValue;
+  
+  modulesCountValue;
+
+  commentsCountValue;
+
   constructor(private themeService: ThemeService, private animationsService: AnimationsService) {}
 
   ngOnInit(): void {
@@ -22,6 +30,14 @@ export class SettingsComponent implements OnInit {
     localStorage.getItem('animations') === 'enabled'
       ? this.toggleAnimationsChecked = true
       : this.toggleAnimationsChecked = false;
+
+    this.articlesCountValue = localStorage.getItem('articlesCount') || 10;
+    
+    this.staffCountValue = localStorage.getItem('staffCount') || 10;
+
+    this.modulesCountValue = localStorage.getItem('modulesCount') || 10;
+
+    this.commentsCountValue = localStorage.getItem('commentsCount') || 10;
   }
 
   toggleTheme(): void {
@@ -42,5 +58,12 @@ export class SettingsComponent implements OnInit {
       this.animationsService.isAnimationsDisabled.next(true);
       localStorage.setItem("animations", "disabled");
     }
+  }
+
+  itemCount(event): void {
+    const name = event.source.ariaLabel;
+    const value = event.value;
+
+    localStorage.setItem(name, value);
   }
 }

@@ -5,7 +5,7 @@
     </mat-paginator>
 </div>
 <div id="comments__container">
-    <mat-card class="comment">
+    <mat-card class="comment" *ngFor="let comment of obs | async">
         <mat-card-title>
             <span id="comment__avatar"></span>
             <span id="comment__title">Александр Абдулаев</span>

@@ -4,20 +4,9 @@
     </mat-paginator>
 </div>
 <div class="modules__container">
-    <mat-card id="module">
+    <mat-card id="module" *ngFor="let module of obs | async">
         <mat-card-content>
-            <span class="modules__title">Меню</span>
-            <img src="assets/img/settings-gears.png" class="modules__image">
-        </mat-card-content>
-        <mat-divider></mat-divider>
-        <mat-card-footer>
-            <button mat-flat-button>Применить</button>
-            <button mat-flat-button>Подробнее</button>
-        </mat-card-footer>
-    </mat-card>
-    <mat-card id="module">
-        <mat-card-content>
-            <span class="modules__title">Меню</span>
+            <span class="modules__title">{{ module.title }}</span>
             <img src="assets/img/settings-gears.png" class="modules__image">
         </mat-card-content>
         <mat-divider></mat-divider>

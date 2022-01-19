@@ -25,7 +25,10 @@
                         <div class="mat-select-block">
                             <div class="mat-select-block__label">Количество статей на страницу</div>
                             <mat-form-field appearance="fill">
-                                <mat-select>
+                                <mat-select aria-label="articlesCount"
+                                            [(ngModel)]="articlesCountValue"
+                                            (selectionChange)="itemCount($event)">
+                                    <mat-option value="10">10</mat-option>
                                     <mat-option value="20">20</mat-option>
                                     <mat-option value="40">40</mat-option>
                                     <mat-option value="50">50</mat-option>
@@ -35,7 +38,10 @@
                         <div class="mat-select-block">
                             <span class="mat-select-block__label">Количество сотрудников на страницу</span>
                             <mat-form-field appearance="fill">
-                                <mat-select>
+                                <mat-select aria-label="staffCount"
+                                            [(ngModel)]="staffCountValue"
+                                            (selectionChange)="itemCount($event)">
+                                    <mat-option value="10">10</mat-option>
                                     <mat-option value="20">20</mat-option>
                                     <mat-option value="40">40</mat-option>
                                     <mat-option value="50">50</mat-option>
@@ -45,7 +51,23 @@
                         <div class="mat-select-block">
                             <span class="mat-select-block__label">Количество модулей на страницу</span>
                             <mat-form-field appearance="fill">
-                                <mat-select>
+                                <mat-select aria-label="modulesCount"
+                                            [(ngModel)]="modulesCountValue"
+                                            (selectionChange)="itemCount($event)">
+                                    <mat-option value="10">10</mat-option>
+                                    <mat-option value="20">20</mat-option>
+                                    <mat-option value="40">40</mat-option>
+                                    <mat-option value="50">50</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="mat-select-block">
+                            <span class="mat-select-block__label">Количество комментариев на страницу</span>
+                            <mat-form-field appearance="fill">
+                                <mat-select aria-label="commentsCount"
+                                            [(ngModel)]="commentsCountValue"
+                                            (selectionChange)="itemCount($event)">
+                                    <mat-option value="10">10</mat-option>
                                     <mat-option value="20">20</mat-option>
                                     <mat-option value="40">40</mat-option>
                                     <mat-option value="50">50</mat-option>
