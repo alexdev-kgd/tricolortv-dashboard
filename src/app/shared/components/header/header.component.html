@@ -1,17 +1,25 @@
 <mat-toolbar color="primary">
     <div class="header__leftSide" fxLayout="row" fxLayoutAlign="start center">
         <a href="#">
-            <img *ngIf="!isDarkMode"
+            <img *ngIf="!isDarkMode && !latinLetters"
                   src="../../assets/img/logo.png"
                   alt="tricolortv"
                   class="header__logo">
-            <img *ngIf="isDarkMode"
+            <img *ngIf="isDarkMode && !latinLetters"
                   src="../../assets/img/logo_light.png"
                   alt="tricolortv"
                   class="header__logo">
+            <img *ngIf="!isDarkMode && latinLetters"
+                  src="../../assets/img/logo_en.png"
+                  alt="tricolortv_en"
+                  class="header__logo">
+            <img *ngIf="isDarkMode && latinLetters"
+                  src="../../assets/img/logo_light_en.png"
+                  alt="tricolortv_en"
+                  class="header__logo">
         </a>
         <span class="header__title">
-            <h3>Admin-панель</h3>
+            <h3>{{ 'HEADER.TITLE' | translate }}</h3>
             <p>Dashboard</p>
         </span>
     </div>

@@ -1,6 +1,9 @@
 <mat-form-field id="articles__search" floatLabel="never">
     <mat-icon aria-hidden="false" aria-label="Search" matPrefix id="search__searchIcon">search</mat-icon>
-    <input matInput type="text" [(ngModel)]="value" placeholder="Начните вводить ваш запрос">
+    <input matInput
+           type="text"
+           [(ngModel)]="value"
+           placeholder="{{ 'SEARCHBAR.PLACEHOLDER' | translate }}">
     <button mat-button *ngIf="value" matSuffix mat-icon-button (click)="value=''"></button>
     <button mat-icon-button 
             matSuffix 

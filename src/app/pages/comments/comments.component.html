@@ -11,20 +11,22 @@
             <span id="comment__title">Александр Абдулаев</span>
             <div id="comment__text-container">
                 <span id="comment__date">15.06.19 16:30</span>
-                <span id="comment__location">в статье <a href="">Как настроить антенну Триколор ТВ</a></span>
+                <span id="comment__location">
+                    {{ 'COMMENTS.SUBJECT' | translate }} <a href="">Как настроить антенну Триколор ТВ</a>
+                </span>
             </div>
             <button mat-icon-button [matMenuTriggerFor]="menu" id="comment__menu-btn" aria-label="Comment options">
                 <mat-icon>more_vert</mat-icon>
             </button>
             <mat-menu #menu="matMenu">
                 <button mat-menu-item>
-                    <span>Ответить</span>
+                    <span>{{ 'BTNS.REPLY' | translate }}</span>
                 </button>
                 <button mat-menu-item>
-                    <span>Редактировать</span>
+                    <span>{{ 'BTNS.EDIT' | translate }}</span>
                 </button>
                 <button mat-menu-item>
-                    <span>Удалить</span>
+                    <span>{{ 'BTNS.DELETE' | translate }}</span>
                 </button>
             </mat-menu>                       
         </mat-card-title>

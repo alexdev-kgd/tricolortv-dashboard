@@ -1,3 +1,4 @@
+import { TranslationService } from '@services/translation.service';
 import { Component, OnInit } from '@angular/core';
 import { FontSizeService } from '@services/font-size.service';
 
@@ -9,10 +10,12 @@ import { FontSizeService } from '@services/font-size.service';
 export class HomeComponent implements OnInit {
   fontSizeValue: string;
 
-  constructor(private fontSizeService: FontSizeService) {
+  constructor(private fontSizeService: FontSizeService, private translationService: TranslationService) {
   }
 
   ngOnInit(): void {
     this.fontSizeValue = this.fontSizeService.getFontSizeClass();
+
+    this.translationService.currentLanguage.subscribe(() => this.translationService.checkLanguage());
   }
 }

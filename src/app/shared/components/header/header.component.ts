@@ -1,3 +1,4 @@
+import { TranslationService } from '@services/translation.service';
 import { ThemeService } from '@services/theme.service';
 import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 
@@ -13,18 +14,24 @@ export class HeaderComponent implements OnInit {
 
   isDarkMode: boolean;
 
+  latinLetters: boolean; 
+
   toggleSidebar(): void {
     this.showSidebar.emit(!this.menuOpened);
   }
 
-  constructor(private themeService: ThemeService) {
-  }
+  constructor(private translationService: TranslationService, private themeService: ThemeService) { }
 
   ngOnInit() {
     const mediaColorScheme = window.matchMedia('(prefers-color-scheme: dark)');
     mediaColorScheme.addEventListener("change", () => this.checkColorScheme(mediaColorScheme));
     this.checkColorScheme(mediaColorScheme);
     this.themeService.isDarkMode.subscribe((bool) => this.isDarkMode = bool)
+
+    this.translationService.currentLanguage.subscribe((lang) => {
+      this.latinLetters = lang === 'ru' ? false : true;
+      this.translationService.checkLanguage()
+    });
   }
 
   checkColorScheme(mediaColorScheme: MediaQueryList): void {

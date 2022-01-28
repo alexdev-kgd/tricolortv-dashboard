@@ -21,6 +21,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { InputNumberComponent } from './components/input-number/input-number.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { MenuComponent } from './components/menu/menu.component';
     MatDatepickerModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    TranslateModule,
   ],
   exports: [
     HeaderComponent,

@@ -1,3 +1,4 @@
+import { TranslationService } from '@services/translation.service';
 import { ChangeDetectorRef, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
@@ -173,7 +174,9 @@ export class ArticlesComponent implements OnInit, OnDestroy {
 
   obs: Observable<any>;
 
-  constructor(private changeDetectorRef: ChangeDetectorRef, private fontSizeService: FontSizeService) {
+  constructor(private changeDetectorRef: ChangeDetectorRef,
+              private fontSizeService: FontSizeService,
+              private translationService: TranslationService) {
   }
 
   ngOnInit(): void {
@@ -182,6 +185,8 @@ export class ArticlesComponent implements OnInit, OnDestroy {
     this.obs = this.dataSource.connect();
 
     this.fontSizeValue = this.fontSizeService.getFontSizeClass();
+
+    this.translationService.currentLanguage.subscribe(() => this.translationService.checkLanguage());
   }
 
   ngOnDestroy(): void {

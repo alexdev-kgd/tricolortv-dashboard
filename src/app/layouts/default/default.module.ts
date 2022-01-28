@@ -27,6 +27,7 @@ import { CommentsComponent } from '@pages/comments/comments.component';
 import { ModulesComponent } from '@pages/modules/modules.component';
 
 import { DefaultComponent } from './default.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { DefaultComponent } from './default.component';
     MatCheckboxModule,
     MatMenuModule,
     MatSlideToggleModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TranslateModule,
   ],
   providers: [],
 })

@@ -1,3 +1,4 @@
+import { TranslationService } from '@services/translation.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import {MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS} from '@angular/material-moment-adapter';
@@ -31,15 +32,19 @@ export const MY_FORMATS = {
   ],
 })
 export class DatepickerComponent implements OnInit {
-  constructor(private _adapter: DateAdapter<any>) {}
+  constructor(private _adapter: DateAdapter<any>, private translationService: TranslationService) {}
 
   date = new FormControl(moment());
 
-  russian() {
-    this._adapter.setLocale('ru');
+  setLocale(lang: string) {
+    this._adapter.setLocale(lang);
   }
-  
+
   ngOnInit(): void {
-    this.russian();
+    this.translationService.currentLanguage.subscribe(() => {
+      this.setLocale(localStorage.getItem('language'))
+
+      this.translationService.currentLanguage.subscribe(() => this.translationService.checkLanguage());
+    });
   }
 }

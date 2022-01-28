@@ -1,3 +1,4 @@
+import { TranslationService } from './../../shared/services/translation.service';
 import { AnimationsService } from '@services/animations.service';
 import { ThemeService } from '@services/theme.service';
 import { Component, OnInit } from '@angular/core';
@@ -20,7 +21,11 @@ export class SettingsComponent implements OnInit {
 
   commentsCountValue;
 
-  constructor(private themeService: ThemeService, private animationsService: AnimationsService) {}
+  langValue;
+
+  constructor(private themeService: ThemeService, 
+              private animationsService: AnimationsService,
+              private translationService: TranslationService) {}
 
   ngOnInit(): void {
     localStorage.getItem('theme') === 'dark'
@@ -38,6 +43,10 @@ export class SettingsComponent implements OnInit {
     this.modulesCountValue = localStorage.getItem('modulesCount') || 10;
 
     this.commentsCountValue = localStorage.getItem('commentsCount') || 10;
+
+    this.langValue = localStorage.getItem('language');
+
+    this.translationService.currentLanguage.subscribe(() => this.translationService.checkLanguage());
   }
 
   toggleTheme(): void {
@@ -60,7 +69,12 @@ export class SettingsComponent implements OnInit {
     }
   }
 
-  itemCount(event): void {
+  onSelectChangeLang(event) {
+    this.onSelectChange(event)
+    this.translationService.currentLanguage.next(event.value);
+  }
+
+  onSelectChange(event): void {
     const name = event.source.ariaLabel;
     const value = event.value;
 
