@@ -1,3 +1,6 @@
+import { SETTINGS_DEFAULT_ITEM_COUNT_PER_PAGE,
+         SETTINGS_DEFAULT_INTERFACE_LANGUAGE,
+         SETTINGS_DEFAULT_CONTENT_LANGUAGE } from './../../shared/constants/settings';
 import { TranslationService } from './../../shared/services/translation.service';
 import { AnimationsService } from '@services/animations.service';
 import { ThemeService } from '@services/theme.service';
@@ -23,6 +26,8 @@ export class SettingsComponent implements OnInit {
 
   langValue;
 
+  contentLangValue;
+
   constructor(private themeService: ThemeService, 
               private animationsService: AnimationsService,
               private translationService: TranslationService) {}
@@ -32,19 +37,19 @@ export class SettingsComponent implements OnInit {
       ? this.toggleThemeChecked = true
       : this.toggleThemeChecked = false;
 
-    localStorage.getItem('animations') === 'enabled'
-      ? this.toggleAnimationsChecked = true
-      : this.toggleAnimationsChecked = false;
+    this.toggleAnimationsChecked = !this.animationsService.checkAnimationLocalStorage();
 
-    this.articlesCountValue = localStorage.getItem('articlesCount') || 10;
+    this.articlesCountValue = localStorage.getItem('articlesCount') || SETTINGS_DEFAULT_ITEM_COUNT_PER_PAGE;
     
-    this.staffCountValue = localStorage.getItem('staffCount') || 10;
+    this.staffCountValue = localStorage.getItem('staffCount') || SETTINGS_DEFAULT_ITEM_COUNT_PER_PAGE;
 
-    this.modulesCountValue = localStorage.getItem('modulesCount') || 10;
+    this.modulesCountValue = localStorage.getItem('modulesCount') || SETTINGS_DEFAULT_ITEM_COUNT_PER_PAGE;
 
-    this.commentsCountValue = localStorage.getItem('commentsCount') || 10;
+    this.commentsCountValue = localStorage.getItem('commentsCount') || SETTINGS_DEFAULT_ITEM_COUNT_PER_PAGE;
 
-    this.langValue = localStorage.getItem('language');
+    this.langValue = localStorage.getItem('language') || SETTINGS_DEFAULT_INTERFACE_LANGUAGE;
+
+    this.contentLangValue = localStorage.getItem('contentLanguage') || SETTINGS_DEFAULT_CONTENT_LANGUAGE;
 
     this.translationService.currentLanguage.subscribe(() => this.translationService.checkLanguage());
   }
@@ -70,8 +75,13 @@ export class SettingsComponent implements OnInit {
   }
 
   onSelectChangeLang(event) {
-    this.onSelectChange(event)
+    this.onSelectChange(event);
     this.translationService.currentLanguage.next(event.value);
+  }
+
+  onSelectChangeContentLang(event) {
+    this.onSelectChange(event);
+    this.translationService.currentContentLanguage.next(event.value);
   }
 
   onSelectChange(event): void {

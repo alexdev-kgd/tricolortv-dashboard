@@ -38,15 +38,16 @@ export class DefaultComponent implements OnInit {
 
   ngOnInit(): void {
     this.applyDeviceConfigs();
-    this.animationsService.isAnimationsDisabled.subscribe((bool) => this.isDisabled = bool);
+    this.animationsService.isAnimationsDisabled.subscribe((bool) => { 
+      this.isDisabled = bool });
   }
 
   applyDeviceConfigs(): void {
     if(this.checkWindowSize() === DEVICES.TABLET) {
-      this.animationsService.isAnimationsDisabled.next(true); 
+      this.animationsService.checkAnimationLocalStorage(true);
       this.menuOpened = false;
     } else {
-      this.animationsService.isAnimationsDisabled.next(false); 
+      this.animationsService.checkAnimationLocalStorage(false);
       this.menuOpened = true;
     }
   }

@@ -5,6 +5,8 @@ import { MatTableDataSource } from '@angular/material/table';
 import { FontSizeService } from '@shared/services/font-size.service';
 import { Observable } from 'rxjs';
 import { PaginatorArticlesService } from './paginator-articles.service';
+import Article from '@shared/models/article.model';
+import { SETTINGS_DEFAULT_CONTENT_LANGUAGE } from '@shared/constants/settings';
 
 @Component({
   selector: 'app-articles',
@@ -25,7 +27,42 @@ export class ArticlesComponent implements OnInit, OnDestroy {
 
   fontSizeValue: string;
 
-  articles = [{
+  articles_en: Article[] = [{
+    title: 'Information about Tricolor TV',
+    datePublished: '15.06.19',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
+    'In malesuada mi lorem, non ultricies eros consequat eget. Nullam blandit ' +
+    'consectetur arcu, pharetra rutrum leo pharetra et. Praesent luctus ipsum ac ' +
+    'tellus placerat, a dapibus felis suscipit. Curabitur in tristique metus. Etiam ' +
+    'euismod tincidunt lorem vitae consequat. Nam a elit quam. Duis non vulputate justo. ' +
+    'Phasellus odio erat, luctus sed auctor tempus, vehicula at tortor. Quisque hendrerit ' +
+    'tristique dui a pellentesque. Vestibulum in molestie metus, nec vulputate lectus. ' +
+    'Aliquam erat volutpat. Nunc convallis tortor commodo elit lacinia egestas.'
+  }, {
+    title: 'Information about Tricolor TV',
+    datePublished: '15.06.19',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
+    'In malesuada mi lorem, non ultricies eros consequat eget. Nullam blandit ' +
+    'consectetur arcu, pharetra rutrum leo pharetra et. Praesent luctus ipsum ac ' +
+    'tellus placerat, a dapibus felis suscipit. Curabitur in tristique metus. Etiam ' +
+    'euismod tincidunt lorem vitae consequat. Nam a elit quam. Duis non vulputate justo. ' +
+    'Phasellus odio erat, luctus sed auctor tempus, vehicula at tortor. Quisque hendrerit ' +
+    'tristique dui a pellentesque. Vestibulum in molestie metus, nec vulputate lectus. ' +
+    'Aliquam erat volutpat. Nunc convallis tortor commodo elit lacinia egestas.'
+  }, {
+    title: 'Information about Tricolor TV',
+    datePublished: '15.06.19',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
+    'In malesuada mi lorem, non ultricies eros consequat eget. Nullam blandit ' +
+    'consectetur arcu, pharetra rutrum leo pharetra et. Praesent luctus ipsum ac ' +
+    'tellus placerat, a dapibus felis suscipit. Curabitur in tristique metus. Etiam ' +
+    'euismod tincidunt lorem vitae consequat. Nam a elit quam. Duis non vulputate justo. ' +
+    'Phasellus odio erat, luctus sed auctor tempus, vehicula at tortor. Quisque hendrerit ' +
+    'tristique dui a pellentesque. Vestibulum in molestie metus, nec vulputate lectus. ' +
+    'Aliquam erat volutpat. Nunc convallis tortor commodo elit lacinia egestas.'
+  }];
+
+  articles: Article[] = [{
     title: 'Информация о Триколор ТВ',
     datePublished: '15.06.19',
     text: 'Триколор — это самый крупный оператор цифрового спутникового телевидения в России, ' +
@@ -170,13 +207,28 @@ export class ArticlesComponent implements OnInit, OnDestroy {
     text: 'Триколор — это самый крупный оператор цифрового спутникового телевидения в России, '
   }];
 
-  dataSource: MatTableDataSource<any> = new MatTableDataSource<any>(this.articles);
+  dataSource: MatTableDataSource<any> = new MatTableDataSource<any>(this.getContentByLanguage());
 
   obs: Observable<any>;
 
   constructor(private changeDetectorRef: ChangeDetectorRef,
               private fontSizeService: FontSizeService,
               private translationService: TranslationService) {
+  }
+
+  getContentByLanguage(): Article[] {
+    const contentLanguage = localStorage.getItem('contentLanguage') || SETTINGS_DEFAULT_CONTENT_LANGUAGE;
+
+    switch (contentLanguage) {
+      case 'ru':
+        return this.articles;
+        break;
+      case 'en':
+        return this.articles_en;
+        break;
+      default:
+        break;
+    }
   }
 
   ngOnInit(): void {

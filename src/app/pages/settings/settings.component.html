@@ -108,6 +108,19 @@
                                 </mat-select>
                             </mat-form-field>
                         </div>
+                        <div class="mat-select-block">
+                            <span class="mat-select-block__label">
+                                {{ 'OPTIONS.CONTENT_LANG' | translate }}
+                            </span>
+                            <mat-form-field appearance="fill">
+                                <mat-select aria-label="contentLanguage"
+                                            [(ngModel)]="contentLangValue"
+                                            (selectionChange)="onSelectChangeContentLang($event)">
+                                    <mat-option value="ru">Русский</mat-option>
+                                    <mat-option value="en">English</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
                     </div>
                 </ng-container>
             </app-section>
