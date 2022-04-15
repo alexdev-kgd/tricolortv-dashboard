@@ -22,6 +22,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { InputNumberComponent } from './components/input-number/input-number.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { PieChartComponent } from './components/pie-chart/pie-chart.component';
+import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { TranslateModule } from '@ngx-translate/core';
     DatepickerComponent,
     InputNumberComponent,
     MenuComponent,
-    BindClickEventDirective
+    BindClickEventDirective,
+    PieChartComponent,
+    BarChartComponent
   ],
   imports: [
     CommonModule,
@@ -56,6 +60,8 @@ import { TranslateModule } from '@ngx-translate/core';
     HeaderComponent,
     SidebarComponent,
     LinearChartComponent,
+    PieChartComponent,
+    BarChartComponent,
     SearchComponent,
     MenuComponent,
     DatepickerComponent,
