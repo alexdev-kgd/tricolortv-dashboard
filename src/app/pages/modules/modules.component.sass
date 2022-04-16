@@ -13,7 +13,7 @@
 
     .modules__container
         display: grid
-        grid-template-columns: 335px 335px
+        grid-template-columns: $itemsColumnsGrid
         justify-items: stretch
         justify-content: center
         grid-gap: 55px
@@ -26,10 +26,10 @@
         width: 335px
         border-radius: 0
         padding: 0
-        margin-bottom: 30px
+        // margin-bottom: 30px
 
-        @media (min-width: $tablet)
-            margin-bottom: 80px
+        // @media (min-width: $tablet)
+        //     margin-bottom: 80px
 
     mat-card-content
         display: flex

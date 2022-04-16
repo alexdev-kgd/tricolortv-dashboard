@@ -39,16 +39,16 @@ mat-card, #datepicker, mat-paginator
 #smallStats__container
     margin-top: 30px
     width: 100%
-    display: grid
-    grid-template-columns: 3fr 3fr 3fr
-    grid-gap: 30px
-    align-items: end
     // display: flex
     // flex-direction: column
     // align-items: center
 
     @media (min-width: $tablet)
         margin-top: 0
+        display: grid
+        grid-template-columns: 3fr 3fr 3fr
+        grid-gap: 30px
+        align-items: end
         // flex-direction: row
         // justify-content: space-between
 
@@ -103,11 +103,15 @@ mat-card, #datepicker, mat-paginator
         flex-direction: row
 
     mat-paginator
+        width: 100%
         height: 50px
         padding: 5px 15px
         border-radius: 50px
         box-sizing: border-box
         font-size: 14px
+
+        @media (min-width: $tablet)
+            width: auto
     
     .mat-paginator
 
@@ -140,7 +144,7 @@ mat-card, #datepicker, mat-paginator
 #articles__container
     width: 100%
     margin-top: 30px
-    margin-bottom: 50px
+    padding-bottom: $containerBottomPadding
 
     .article
         width: 100%

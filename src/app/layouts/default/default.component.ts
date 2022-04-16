@@ -4,6 +4,8 @@ import { RouterOutlet } from '@angular/router';
 import { slideInAnimation } from '@shared/animations';
 import { DEVICES, WINDOW_SIZE } from '@shared/constants/windowSize';
 import { AnimationsService } from '@services/animations.service';
+import { fromEvent } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
 
 @Directive({
   selector: '[sidebarLink]'
@@ -12,6 +14,7 @@ export class BindClickEventDirective {
   constructor(private element: ElementRef, private defaultComponent: DefaultComponent) {}
   @HostListener('click') 
   onClick() {
+    console.log(this.defaultComponent.checkWindowSize())
     if(this.defaultComponent.checkWindowSize() === DEVICES.TABLET)
       this.defaultComponent.menuOpened = false;
   }
@@ -37,9 +40,19 @@ export class DefaultComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.observeWindowResize();
     this.applyDeviceConfigs();
-    this.animationsService.isAnimationsDisabled.subscribe((bool) => { 
-      this.isDisabled = bool });
+    this.animationsService.isAnimationsDisabled.subscribe((bool) => {
+      this.isDisabled = bool 
+    });
+  }
+
+  observeWindowResize(): void {
+    fromEvent(window, 'resize').pipe(
+      debounceTime(100)
+    ).subscribe(() => {
+      this.applyDeviceConfigs();
+    });
   }
 
   applyDeviceConfigs(): void {
