@@ -26,14 +26,14 @@
     }
   }
 
+  .list-item-active {
+    color: #000 !important;
+    background-color: #f4f4f4;
+  }
+
   #sidebar {
     &__link {
       color: #898989;
-
-      .list-item-active {
-        color: #000;
-        background-color: #f4f4f4;
-      }
     }
 
     &__copyright {

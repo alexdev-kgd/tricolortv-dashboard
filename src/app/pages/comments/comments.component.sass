@@ -1,5 +1,5 @@
 @import "../../shared/stylesPages.sass"
-@import '~src/assets/sass/vars'
+@import "vars"
 
 :host
     width: 100%
@@ -17,19 +17,12 @@
     #comments__container
         display: grid
         grid-gap: 20px
-        // display: flex
-        // flex-wrap: wrap
-        // justify-content: space-around
         margin-top: 30px
         padding-bottom: $containerBottomPadding
 
         .comment
             width: 100%
-            // margin-bottom: 20px
             box-sizing: border-box
-
-            &:last-child
-                // margin-bottom: 0
 
             mat-card-title
                 display: block

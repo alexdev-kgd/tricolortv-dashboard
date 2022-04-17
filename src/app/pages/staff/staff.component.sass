@@ -1,5 +1,5 @@
 @import "../../shared/stylesPages.sass"
-@import '~src/assets/sass/vars'
+@import "vars"
 
 :host
     width: 100%
@@ -9,25 +9,17 @@
         margin-top: 0 !important
 
     .staff__container
-        display: grid
-        grid-template-columns: $itemsColumnsGrid
-        justify-items: stretch
-        justify-content: center
-        grid-gap: 55px
-        // display: flex
-        // flex-wrap: wrap
-        // justify-content: space-around
         margin-top: 30px
         padding-bottom: $containerBottomPadding
+        display: grid
+        grid-gap: 55px
+        justify-items: stretch
+        justify-content: center
+        grid-template-columns: $itemsColumnsGrid
 
     mat-card
-        // width: 335px
         border-radius: 0
         padding: 0
-        // margin-bottom: 30px
-
-        @media (min-width: $tablet)
-            // margin-bottom: 80px
 
     mat-card-content
         margin-bottom: 0

@@ -14,7 +14,6 @@ export class BindClickEventDirective {
   constructor(private element: ElementRef, private defaultComponent: DefaultComponent) {}
   @HostListener('click') 
   onClick() {
-    console.log(this.defaultComponent.checkWindowSize())
     if(this.defaultComponent.checkWindowSize() === DEVICES.TABLET)
       this.defaultComponent.menuOpened = false;
   }

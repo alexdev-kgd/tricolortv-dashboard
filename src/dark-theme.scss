@@ -28,14 +28,14 @@
     }
   }
 
+  .list-item-active {
+    color: #fff !important;
+    background-color: #4d4d4d !important;
+  }
+
   #sidebar {
     &__link {
       color: #acacac;
-
-      .list-item-active {
-        color: #000 !important;
-        background-color: #f4f4f4 !important;
-      }
 
       &:hover {
         color: #fff;

@@ -24,6 +24,8 @@ import { MenuComponent } from './components/menu/menu.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { PieChartComponent } from './components/pie-chart/pie-chart.component';
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
+import { SmallStatisticsContainerComponent } from './components/small-statistics-container/small-statistics-container.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { BarChartComponent } from './components/bar-chart/bar-chart.component';
     MenuComponent,
     BindClickEventDirective,
     PieChartComponent,
-    BarChartComponent
+    BarChartComponent,
+    SmallStatisticsContainerComponent
   ],
   imports: [
     CommonModule,
@@ -47,6 +50,7 @@ import { BarChartComponent } from './components/bar-chart/bar-chart.component';
     MatDividerModule,
     MatListModule,
     MatMenuModule,
+    MatCardModule,
     FlexLayoutModule,
     MatInputModule,
     FormsModule,
@@ -66,6 +70,7 @@ import { BarChartComponent } from './components/bar-chart/bar-chart.component';
     MenuComponent,
     DatepickerComponent,
     InputNumberComponent,
+    SmallStatisticsContainerComponent
   ],
 })
 export class SharedModule { }
