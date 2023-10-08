@@ -19,7 +19,7 @@ export class TranslationService {
   }
 
   checkLanguage(): void {
-    this.translate.use(localStorage.getItem('language'));
+    this.translate.use(localStorage.getItem('language') || 'ru');
   }
 
   

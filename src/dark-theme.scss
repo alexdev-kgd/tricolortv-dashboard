@@ -1,4 +1,6 @@
 @mixin dark-theme {
+  background-color: #303030;
+
   app-search,
   app-datepicker {
     mat-form-field {
