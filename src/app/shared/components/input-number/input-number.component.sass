@@ -1,0 +1,36 @@
+.input-number
+    display: flex
+
+    
+
+    &__decrement,
+    &__increment,
+    &__field
+        box-sizing: border-box
+        border: 1px solid #898989
+        height: 40px
+        user-select: none
+        display: inline-block
+
+    &__decrement,
+    &__increment
+        width: 30px
+        font-weight: bold
+        cursor: pointer
+        line-height: 38px
+        text-align: center
+
+    &__decrement
+        border-right: none
+        border-radius: 4px 0 0 4px
+
+    &__increment
+        border-left: none
+        border-radius: 0 4px 4px 0
+
+    &__field
+        width: 80px
+        padding: 0 12px
+        vertical-align: middle
+        text-align: center
+        outline: none

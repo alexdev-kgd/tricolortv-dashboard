@@ -1,0 +1,12 @@
+@mixin fontSizeFactory($fontSize: 14)
+    .fs-#{$fontSize}
+        font-size: $fontSize + px !important
+
+@include fontSizeFactory(11)
+@include fontSizeFactory(12)
+@include fontSizeFactory(13)
+@include fontSizeFactory(14)
+@include fontSizeFactory(15)
+@include fontSizeFactory(16)
+@include fontSizeFactory(17)
+@include fontSizeFactory(18)

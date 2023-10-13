@@ -1,0 +1,16 @@
+<app-header [menuOpened]="menuOpened" 
+            (showSidebar)="toggleMenu($event)"></app-header>
+
+<mat-drawer-container (backdropClick)="toggleMenu()">
+    <mat-drawer [mode]="mobileQuery.matches ? 'side' : 'over'" 
+                [opened]="menuOpened">
+        <app-sidebar></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content [@routeAnimations]="prepareRoute(outlet)"
+                        [@.disabled]="isDisabled">
+        <div id="toggleBar" (click)="toggleMenu()"
+                            [ngClass]="menuOpened ? 'toggleBar--opened' : 'toggleBar--closed'">
+        </div>
+        <router-outlet #outlet="outlet"></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>

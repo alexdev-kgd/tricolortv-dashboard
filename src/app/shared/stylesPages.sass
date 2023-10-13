@@ -1,0 +1,142 @@
+@import "vars"
+@import "~src/assets/sass/font-sizes"
+
+mat-card, #datepicker, mat-paginator
+    border-radius: 0
+    -webkit-box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.25)
+    -moz-box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.25)
+    box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.25)
+
+::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb
+    background-color: #004c9f !important
+
+::ng-deep .mat-slide-toggle.mat-checked .mat-slide-toggle-bar
+    background-color: #4f92db !important
+
+::ng-deep .mat-slide-toggle.mat-checked .mat-ripple-element
+    background-color: #004c9f !important
+
+::ng-deep .mat-form-field-underline
+    height: 0 !important
+
+::ng-deep .mat-focused .mat-form-field-label
+    /*change color of label*/
+    color: #000 !important
+
+::ng-deep.mat-form-field-ripple
+    /*change color of underline when focused*/
+    background-color: transparent !important
+
+::ng-deep .mat-form-field-infix
+    border-top: 0 !important
+
+::ng-deep .mat-datepicker-popup
+
+    @media (min-width: $tablet)
+        top: 246px !important
+        left: 565px !important
+
+#section__params
+    width: 100%
+    margin-top: 30px
+    display: flex
+    flex-direction: column
+
+    app-datepicker
+        margin-bottom: 30px
+
+        @media (min-width: $tablet)
+            margin-bottom: 0
+
+    @media (min-width: $tablet)
+        display: inline-flex
+        justify-content: flex-end
+        flex-direction: row
+
+    mat-paginator
+        width: 100%
+        height: 50px
+        padding: 5px 15px
+        border-radius: 50px
+        box-sizing: border-box
+        font-size: 14px
+
+        @media (min-width: $tablet)
+            width: auto
+    
+    .mat-paginator
+
+        ::ng-deep .mat-paginator-page-size
+            display: none !important
+
+        ::ng-deep .mat-paginator-outer-container
+            justify-content: space-around
+
+        ::ng-deep .mat-paginator-container
+            min-height: auto
+
+        ::ng-deep .mat-paginator-range-label
+            order: 2
+            margin: 0
+            white-space: nowrap
+            overflow: hidden
+
+        ::ng-deep .mat-paginator-range-actions
+            width: 100%
+            align-items: center
+            justify-content: space-between
+            
+            .mat-focus-indicator:nth-child(2)
+                order: 1
+
+            .mat-focus-indicator:nth-child(3)
+                order: 3
+
+#articles__container
+    width: 100%
+    margin-top: 30px
+    padding-bottom: $containerBottomPadding
+
+    .article
+        width: 100%
+        margin-bottom: 20px
+        box-sizing: border-box
+
+        &:last-child
+            margin-bottom: 0
+
+        mat-card-title
+
+            #article__title
+                display: inline-block
+                vertical-align: middle
+
+            #article__title
+                font-size: 18px
+
+            #article__date
+                margin-top: 10px
+                display: block
+                font-size: 12px
+                color: #898989
+                box-sizing: border-box
+            
+                @media (min-width: $tablet)
+                    margin-left: 20px
+                    padding: 8px 18px
+                    border-left: 3px solid #eaeaea
+                    display: inline-block
+
+        mat-card-content
+            margin-top: 20px
+            margin-bottom: 0
+
+        mat-card-footer
+            padding: 10px 15px
+            text-align: right
+
+            button
+                border-radius: 0
+                padding: 5px 18px
+                text-transform: uppercase
+                font-size: 14px

@@ -1,0 +1,37 @@
+<ng-template id="statistics-container">
+    <mat-card class="statChart">
+        <mat-card-title>Использование спутникового оборудования</mat-card-title>
+        <mat-card-content>
+            <app-linear-chart></app-linear-chart>
+        </mat-card-content>
+    </mat-card>
+    
+    <app-small-statistics-container></app-small-statistics-container>
+</ng-template>
+
+<div id="articles__container">
+    <mat-card class="article">
+        <mat-card-title>
+            <span id="article__title">Информация о Триколор ТВ</span>
+            <span id="article__date">15.06.19</span>
+        </mat-card-title>
+        <mat-card-content [ngClass]="fontSizeValue">
+            <p>Триколор — это самый крупный оператор цифрового спутникового телевидения в России, 
+            осуществляющий с конца 2005 года цифровое вещание пакета телевизионных каналов 
+            на европейскую часть страны, а также территории Сибирского, Уральского и части 
+            Дальневосточного округов.</p>
+
+            <p>Согласно исследованиям компании IHS Screen Digest, Триколор – лидер российского рынка 
+            платного телевидения (37,4% абонентов). В сегменте спутникового ТВ доля абонентов 
+            оператора целых 83%!</p>
+            
+            <p>На текущий момент Триколор является самым массовым оператором платного телевидения в 
+            Европе. Входит по этому показателю в четверку мировых лидеров платного -ТВ. 
+            В рейтинге крупнейших спутниковых ТВ-операторов в мире «Триколор ТВ» занимает третью 
+            строчку по количеству абонентов.</p>
+        </mat-card-content>
+        <mat-card-footer>
+            <button mat-flat-button>{{ 'BTNS.NEXT' | translate }}</button>
+        </mat-card-footer>
+    </mat-card>
+</div>

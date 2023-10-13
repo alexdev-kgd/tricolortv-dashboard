@@ -1,0 +1,69 @@
+@import "vars"
+
+@mixin menu-arrow
+    content: ""
+    position: absolute
+    width: 80%
+    height: 6%
+    top: 40%
+    left: 11%
+    background-image: url("../../../assets/img/arrow-gray.png")
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: 100%
+
+$sidebarWidth: 230px
+$togglebarWidth: 30px
+$drawerContentDefaultPadding: 50px
+$drawerContentDefaultPaddingMobile: 20px
+
+:host
+    display: flex
+    flex-direction: column
+    height: 100%
+
+    ::ng-deep .mat-drawer-inner-container
+        overflow: hidden
+
+    #toggleBar
+        display: none
+
+        @media (min-width: $tablet)
+            display: block
+
+    mat-drawer
+        width: $sidebarWidth
+
+    mat-drawer-container
+        height: 100%
+
+    mat-drawer-content
+        padding-right: $drawerContentDefaultPaddingMobile
+        padding-left: $drawerContentDefaultPaddingMobile
+        padding-top: 20px
+        display: flex
+
+        @media (min-width: $tablet)
+            padding-right: $drawerContentDefaultPadding
+            padding-left: $togglebarWidth + $drawerContentDefaultPadding
+
+    #toggleBar
+        margin-top: -20px
+        margin-left: -80px
+        width: $togglebarWidth
+        height: 100%
+        position: fixed
+        z-index: 9999
+
+        &:hover
+            cursor: pointer
+
+    .toggleBar--opened
+        &:before
+            @include menu-arrow
+            transform: rotate(90deg)
+
+    .toggleBar--closed
+        &:before
+            @include menu-arrow
+            transform: rotate(-90deg)

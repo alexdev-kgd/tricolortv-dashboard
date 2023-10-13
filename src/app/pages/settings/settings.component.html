@@ -1,0 +1,129 @@
+<div id="settings__container">
+    <mat-card class="setting">
+        <mat-card-content>
+            <app-section>
+                <ng-container title>{{ 'OPTIONS.MAIN_SETTINGS' | translate }}</ng-container>
+                <ng-container content>
+                    <div class="settings-section__child-container">
+                        <mat-slide-toggle [checked]="toggleThemeChecked"
+                                          (change)="toggleTheme()">
+                                          {{ 'OPTIONS.DARK_MODE' | translate }}
+                        </mat-slide-toggle>
+                        <mat-slide-toggle [checked]="toggleAnimationsChecked"
+                                          (change)="toggleAnimations($event)">
+                                          {{ 'OPTIONS.ANIMS' | translate }}
+                        </mat-slide-toggle>
+                    </div>
+                    <div class="settings-section__child-container">
+                        <div id="input-font-container">
+                            <span id="input-font-container__title">
+                                {{ 'OPTIONS.FONT' | translate }}
+                            </span>
+                            <input-number [min]="11" [max]="18"></input-number>
+                        </div>
+                    </div>
+                </ng-container>
+            </app-section>
+            <app-section>
+                <ng-container title>{{ 'OPTIONS.PERFORMANCE' | translate }}</ng-container>
+                <ng-container content>
+                    <div class="grid-gap-container settings-section__child-container">
+                        <div class="mat-select-block">
+                            <div class="mat-select-block__label">
+                                {{ 'OPTIONS.ARTICLES_PER_PAGE' | translate }}
+                            </div>
+                            <mat-form-field appearance="fill">
+                                <mat-select aria-label="articlesCount"
+                                            [(ngModel)]="articlesCountValue"
+                                            (selectionChange)="onSelectChange($event)">
+                                    <mat-option value="10">10</mat-option>
+                                    <mat-option value="20">20</mat-option>
+                                    <mat-option value="40">40</mat-option>
+                                    <mat-option value="50">50</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="mat-select-block">
+                            <span class="mat-select-block__label">
+                                {{ 'OPTIONS.STAFF_PER_PAGE' | translate }}
+                            </span>
+                            <mat-form-field appearance="fill">
+                                <mat-select aria-label="staffCount"
+                                            [(ngModel)]="staffCountValue"
+                                            (selectionChange)="onSelectChange($event)">
+                                    <mat-option value="10">10</mat-option>
+                                    <mat-option value="20">20</mat-option>
+                                    <mat-option value="40">40</mat-option>
+                                    <mat-option value="50">50</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="mat-select-block">
+                            <span class="mat-select-block__label">
+                                {{ 'OPTIONS.MODULES_PER_PAGE' | translate }}
+                            </span>
+                            <mat-form-field appearance="fill">
+                                <mat-select aria-label="modulesCount"
+                                            [(ngModel)]="modulesCountValue"
+                                            (selectionChange)="onSelectChange($event)">
+                                    <mat-option value="10">10</mat-option>
+                                    <mat-option value="20">20</mat-option>
+                                    <mat-option value="40">40</mat-option>
+                                    <mat-option value="50">50</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="mat-select-block">
+                            <span class="mat-select-block__label">
+                                {{ 'OPTIONS.COMMENTS_PER_PAGE' | translate }}
+                            </span>
+                            <mat-form-field appearance="fill">
+                                <mat-select aria-label="commentsCount"
+                                            [(ngModel)]="commentsCountValue"
+                                            (selectionChange)="onSelectChange($event)">
+                                    <mat-option value="10">10</mat-option>
+                                    <mat-option value="20">20</mat-option>
+                                    <mat-option value="40">40</mat-option>
+                                    <mat-option value="50">50</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </ng-container>
+            </app-section>
+            <app-section>
+                <ng-container title>{{ 'OPTIONS.INTERFACE' | translate }}</ng-container>
+                <ng-container content>
+                    <div class="grid-gap-container settings-section__child-container">
+                        <div class="mat-select-block">
+                            <span class="mat-select-block__label">
+                                {{ 'OPTIONS.INTERFACE_LANG' | translate }}
+                            </span>
+                            <mat-form-field appearance="fill">
+                                <mat-select aria-label="language"
+                                            [(ngModel)]="langValue"
+                                            (selectionChange)="onSelectChangeLang($event)">
+                                    <mat-option value="ru">Русский</mat-option>
+                                    <mat-option value="en">English</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div class="mat-select-block">
+                            <span class="mat-select-block__label">
+                                {{ 'OPTIONS.CONTENT_LANG' | translate }}
+                            </span>
+                            <mat-form-field appearance="fill">
+                                <mat-select aria-label="contentLanguage"
+                                            [(ngModel)]="contentLangValue"
+                                            (selectionChange)="onSelectChangeContentLang($event)">
+                                    <mat-option value="ru">Русский</mat-option>
+                                    <mat-option value="en">English</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </ng-container>
+            </app-section>
+        </mat-card-content>
+    </mat-card>
+</div>

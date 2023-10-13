@@ -1,0 +1,56 @@
+@import "vars"
+
+:host
+
+    mat-toolbar
+        width: 100%
+        padding: 15px 25px
+        height: 86px
+
+        .header
+            &__logo
+                width: 210px
+                height: 52px
+                display: inline-block
+                vertical-align: middle
+
+            &__title
+                display: none
+
+                @media (min-width: $tablet)
+                    margin-left: 88px
+                    line-height: 15px
+                    display: inline-block
+
+                h3
+                    font-weight: 400
+                    font-size: 24px
+                p
+                    font-weight: 200
+                    font-size: 16px
+                    margin: 0 !important
+
+            &__menu-mobile
+                display: block
+
+                @media (min-width: $tablet + 100px)
+                    display: none
+
+    li > button
+        width: auto
+
+    ul
+        display: none !important
+
+        @media (min-width: $tablet + 100px)
+            display: flex !important
+    
+        li
+            list-style: none
+
+        span
+            margin-left: 5px
+
+        button
+            ::ng-deep .mat-ripple
+                display: none

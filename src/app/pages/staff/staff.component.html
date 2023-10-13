@@ -1,0 +1,26 @@
+<div id="section__params">
+    <mat-paginator  [length]="length"
+                    [pageSize]="pageSize">
+    </mat-paginator>
+</div>
+<div class="staff__container">
+    <mat-card *ngFor="let person of obs | async">
+        <mat-card-content>
+            <img src="{{ person.photo }}" class="staff__image">
+        </mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-footer>
+            <span class="staff__text">
+                <mat-card-title [ngClass]="fontSizeValue">
+                    {{ person.firstName }} {{ person.lastName }}
+                </mat-card-title>
+                <mat-card-subtitle [ngClass]="fontSizeValue">
+                    {{ person.occupy }}
+                </mat-card-subtitle>
+            </span>
+            <button mat-icon-button class="staff__arrow">
+                <mat-icon>arrow_forward</mat-icon>
+            </button>
+        </mat-card-footer>
+    </mat-card>
+</div>
