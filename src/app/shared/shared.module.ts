@@ -7,8 +7,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
-import { RouterModule } from '@angular/router/';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { RouterModule } from '@angular/router';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -39,7 +38,7 @@ import { MatCardModule } from '@angular/material/card';
     BindClickEventDirective,
     PieChartComponent,
     BarChartComponent,
-    SmallStatisticsContainerComponent
+    SmallStatisticsContainerComponent,
   ],
   imports: [
     CommonModule,
@@ -51,7 +50,6 @@ import { MatCardModule } from '@angular/material/card';
     MatListModule,
     MatMenuModule,
     MatCardModule,
-    FlexLayoutModule,
     MatInputModule,
     FormsModule,
     MatCheckboxModule,
@@ -70,7 +68,7 @@ import { MatCardModule } from '@angular/material/card';
     MenuComponent,
     DatepickerComponent,
     InputNumberComponent,
-    SmallStatisticsContainerComponent
+    SmallStatisticsContainerComponent,
   ],
 })
-export class SharedModule { }
+export class SharedModule {}

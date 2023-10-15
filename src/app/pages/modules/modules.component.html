@@ -1,18 +1,20 @@
 <div id="section__params">
-    <mat-paginator  [length]="length"
-                    [pageSize]="pageSize">
-    </mat-paginator>
+  <mat-paginator [length]="length" [pageSize]="pageSize"> </mat-paginator>
 </div>
 <div class="modules__container">
-    <mat-card id="module" *ngFor="let module of obs | async">
-        <mat-card-content>
-            <span class="modules__title">{{ module.title }}</span>
-            <img src="assets/img/settings-gears.png" class="modules__image">
-        </mat-card-content>
-        <mat-divider></mat-divider>
-        <mat-card-footer>
-            <button mat-flat-button>{{ 'BTNS.APPLY' | translate }}</button>
-            <button mat-flat-button>{{ 'BTNS.DETAILS' | translate }}</button>
-        </mat-card-footer>
-    </mat-card>
+  <mat-card
+    appearance="outlined"
+    id="module"
+    *ngFor="let module of obs | async"
+  >
+    <mat-card-content>
+      <span class="modules__title">{{ module.title }}</span>
+      <img src="assets/img/settings-gears.png" class="modules__image" />
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-footer>
+      <button mat-flat-button>{{ "BTNS.APPLY" | translate }}</button>
+      <button mat-flat-button>{{ "BTNS.DETAILS" | translate }}</button>
+    </mat-card-footer>
+  </mat-card>
 </div>

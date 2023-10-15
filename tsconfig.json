@@ -12,21 +12,18 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ],
+    "lib": ["es2018", "dom"],
     "paths": {
       "@shared/*": ["src/app/shared/*"],
       "@services/*": ["src/app/shared/services/*"],
       "@pages/*": ["src/app/pages/*"],
-      "@assets/*": ["src/assets/*"],
+      "@assets/*": ["src/assets/*"]
     }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true,
+    "strictTemplates": true
   }
 }

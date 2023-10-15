@@ -1,56 +1,72 @@
 <mat-toolbar color="primary">
-    <div class="header__leftSide" fxLayout="row" fxLayoutAlign="start center">
-        <a href="#">
-            <img *ngIf="!isDarkMode && !latinLetters"
-                  src="../../assets/img/logo.png"
-                  alt="tricolortv"
-                  class="header__logo">
-            <img *ngIf="isDarkMode && !latinLetters"
-                  src="../../assets/img/logo_light.png"
-                  alt="tricolortv"
-                  class="header__logo">
-            <img *ngIf="!isDarkMode && latinLetters"
-                  src="../../assets/img/logo_en.png"
-                  alt="tricolortv_en"
-                  class="header__logo">
-            <img *ngIf="isDarkMode && latinLetters"
-                  src="../../assets/img/logo_light_en.png"
-                  alt="tricolortv_en"
-                  class="header__logo">
-        </a>
-        <span class="header__title">
-            <h3>{{ 'HEADER.TITLE' | translate }}</h3>
-            <p>Dashboard</p>
-        </span>
-    </div>
-    <div class="header__right-side" fxFlex fxLayout="row" fxLayoutAlign="end center">
-        <button mat-icon-button color="accent"
-                class="header__menu-mobile"
-                (click)="toggleSidebar()">
-            <mat-icon>menu</mat-icon>
+  <div class="header__leftSide" fxLayout="row" fxLayoutAlign="start center">
+    <a href="#">
+      <img
+        *ngIf="!isDarkMode && !latinLetters"
+        src="../../assets/img/logo.png"
+        alt="tricolortv"
+        class="header__logo"
+      />
+      <img
+        *ngIf="isDarkMode && !latinLetters"
+        src="../../assets/img/logo_light.png"
+        alt="tricolortv"
+        class="header__logo"
+      />
+      <img
+        *ngIf="!isDarkMode && latinLetters"
+        src="../../assets/img/logo_en.png"
+        alt="tricolortv_en"
+        class="header__logo"
+      />
+      <img
+        *ngIf="isDarkMode && latinLetters"
+        src="../../assets/img/logo_light_en.png"
+        alt="tricolortv_en"
+        class="header__logo"
+      />
+    </a>
+    <span class="header__title">
+      <h3>{{ "HEADER.TITLE" | translate }}</h3>
+      <p>Dashboard</p>
+    </span>
+  </div>
+  <div
+    class="header__right-side"
+    fxFlex
+    fxLayout="row"
+    fxLayoutAlign="end center"
+  >
+    <button
+      mat-icon-button
+      color="accent"
+      class="header__menu-mobile"
+      (click)="toggleSidebar()"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <ul fxLayout="row" fxLayoutGap="28px" class="right-side__ul">
+      <li id="right-side__li">
+        <button mat-icon-button color="accent">
+          <mat-icon>mail outline</mat-icon>
         </button>
-        <ul fxLayout="row" fxLayoutGap="28px" class="right-side__ul">
-            <li id="right-side__li">
-                <button mat-icon-button color="accent">
-                    <mat-icon>mail outline</mat-icon>
-                </button>
-            </li>
-            <li id="right-side__li">
-                <button mat-icon-button color="accent">
-                    <mat-icon>notifications</mat-icon>
-                </button>
-            </li>
-            <li id="right-side__li">
-                <button mat-icon-button id="right-side__profile" color="accent">
-                    <mat-icon>person_outline</mat-icon>
-                    <span>Александр Абдулаев</span>
-                </button>
-            </li>
-            <li id="right-side__li">
-                <button mat-icon-button color="accent">
-                    <mat-icon>exit_to_app</mat-icon>
-                </button>
-            </li>
-        </ul>
-    </div>
+      </li>
+      <li id="right-side__li">
+        <button mat-icon-button color="accent">
+          <mat-icon>notifications</mat-icon>
+        </button>
+      </li>
+      <li id="right-side__li">
+        <button mat-icon-button id="right-side__profile" color="accent">
+          <mat-icon>person_outline</mat-icon>
+          <span>Александр Абдулаев</span>
+        </button>
+      </li>
+      <li id="right-side__li">
+        <button mat-icon-button color="accent">
+          <mat-icon>exit_to_app</mat-icon>
+        </button>
+      </li>
+    </ul>
+  </div>
 </mat-toolbar>

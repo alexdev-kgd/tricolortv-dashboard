@@ -1,21 +1,23 @@
 <app-search></app-search>
 <div id="section__params">
-    <app-datepicker></app-datepicker>
-    <mat-paginator  [length]="length"
-                    [pageSize]="pageSize">
-    </mat-paginator>
+  <app-datepicker></app-datepicker>
+  <mat-paginator [length]="length" [pageSize]="pageSize"> </mat-paginator>
 </div>
 <div id="articles__container">
-    <mat-card class="article" *ngFor="let article of obs | async">
-        <mat-card-title>
-            <span id="article__title">{{ article.title }}</span>
-            <span id="article__date">{{ article.datePublished }}</span>
-        </mat-card-title>
-        <mat-card-content [ngClass]="fontSizeValue">
-            {{ article.text }}
-        </mat-card-content>
-        <mat-card-footer>
-            <button mat-flat-button>{{ 'BTNS.NEXT' | translate }}</button>
-        </mat-card-footer>
-    </mat-card>
+  <mat-card
+    appearance="outlined"
+    class="article"
+    *ngFor="let article of obs | async"
+  >
+    <mat-card-title>
+      <span id="article__title">{{ article.title }}</span>
+      <span id="article__date">{{ article.datePublished }}</span>
+    </mat-card-title>
+    <mat-card-content [ngClass]="fontSizeValue">
+      {{ article.text }}
+    </mat-card-content>
+    <mat-card-footer>
+      <button mat-flat-button>{{ "BTNS.NEXT" | translate }}</button>
+    </mat-card-footer>
+  </mat-card>
 </div>

@@ -48,7 +48,7 @@
       color: $text-color-dark-theme;
     }
   }
-
+  /* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version. */
   .mat-focused .mat-form-field-outline,
   .mat-focused .mat-form-field-empty.mat-form-field-label,
   .mat-focused .mat-form-field-label,
@@ -73,10 +73,12 @@
   #smallStats__container,
   #stats__container,
   .staff__container {
+    /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
     mat-card-title,
-    .mat-icon-button {
+    .mat-mdc-icon-button {
       color: $text-color-dark-theme;
     }
+    /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
     mat-card-subtitle {
       color: #898989;
     }
@@ -96,7 +98,7 @@
     }
 
     .comment {
-      .mat-card-content p {
+      .mat-mdc-card-content p {
         color: $text-color-dark-theme;
       }
     }
@@ -143,10 +145,10 @@
     }
   }
 
-  .mat-menu-panel {
+  .mat-mdc-menu-panel {
     color: $text-color-dark-theme;
   }
-
+  /* TODO(mdc-migration): The following rule targets internal classes of select that may no longer apply for the MDC version. */
   #settings__container .mat-select-block__label,
   #settings__container .mat-slide-toggle-content,
   #input-font-container__title,

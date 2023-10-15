@@ -1,9 +1,9 @@
 export enum DEVICES {
-    TABLET = 'TABLET',
-    PC = 'PC'
+  TABLET = 'TABLET',
+  PC = 'PC',
 }
 
 export const WINDOW_SIZE = {
-    TABLET: 768,
-    PC: 1280,
-}
+  TABLET: 768,
+  PC: 1280,
+};

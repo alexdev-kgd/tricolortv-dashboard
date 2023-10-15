@@ -4,12 +4,14 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.sass']
+  styleUrls: ['./sidebar.component.sass'],
 })
 export class SidebarComponent implements OnInit {
   constructor(private translationService: TranslationService) {}
 
   ngOnInit() {
-    this.translationService.currentLanguage.subscribe(() => this.translationService.checkLanguage());
+    this.translationService.currentLanguage.subscribe(() =>
+      this.translationService.checkLanguage(),
+    );
   }
 }

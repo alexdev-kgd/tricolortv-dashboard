@@ -1,8 +1,15 @@
 import { TranslationService } from '@services/translation.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import {MomentDateAdapter, MAT_MOMENT_DATE_ADAPTER_OPTIONS} from '@angular/material-moment-adapter';
-import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/material/core';
+import {
+  MomentDateAdapter,
+  MAT_MOMENT_DATE_ADAPTER_OPTIONS,
+} from '@angular/material-moment-adapter';
+import {
+  DateAdapter,
+  MAT_DATE_FORMATS,
+  MAT_DATE_LOCALE,
+} from '@angular/material/core';
 import * as _moment from 'moment';
 
 const moment = _moment;
@@ -26,13 +33,16 @@ export const MY_FORMATS = {
     {
       provide: DateAdapter,
       useClass: MomentDateAdapter,
-      deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS]
+      deps: [MAT_DATE_LOCALE, MAT_MOMENT_DATE_ADAPTER_OPTIONS],
     },
-    {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS}
+    { provide: MAT_DATE_FORMATS, useValue: MY_FORMATS },
   ],
 })
 export class DatepickerComponent implements OnInit {
-  constructor(private _adapter: DateAdapter<any>, private translationService: TranslationService) {}
+  constructor(
+    private _adapter: DateAdapter<any>,
+    private translationService: TranslationService,
+  ) {}
 
   date = new FormControl(moment());
 
@@ -42,9 +52,11 @@ export class DatepickerComponent implements OnInit {
 
   ngOnInit(): void {
     this.translationService.currentLanguage.subscribe(() => {
-      this.setLocale(localStorage.getItem('language'))
+      this.setLocale(localStorage.getItem('language'));
 
-      this.translationService.currentLanguage.subscribe(() => this.translationService.checkLanguage());
+      this.translationService.currentLanguage.subscribe(() =>
+        this.translationService.checkLanguage(),
+      );
     });
   }
 }

@@ -4,12 +4,15 @@ import { SETTINGS_DEFAULT_INTERFACE_LANGUAGE } from '@shared/constants/settings'
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TranslationService {
-  public currentLanguage: BehaviorSubject<string> = new BehaviorSubject<string>(localStorage.getItem('language') || SETTINGS_DEFAULT_INTERFACE_LANGUAGE);
+  public currentLanguage: BehaviorSubject<string> = new BehaviorSubject<string>(
+    localStorage.getItem('language') || SETTINGS_DEFAULT_INTERFACE_LANGUAGE,
+  );
 
-  public currentContentLanguage: BehaviorSubject<string> = new BehaviorSubject<string>(localStorage.getItem('contentLanguage'));
+  public currentContentLanguage: BehaviorSubject<string> =
+    new BehaviorSubject<string>(localStorage.getItem('contentLanguage'));
 
   defaultLanguage = 'ru';
 
@@ -21,6 +24,4 @@ export class TranslationService {
   checkLanguage(): void {
     this.translate.use(localStorage.getItem('language') || 'ru');
   }
-
-  
 }

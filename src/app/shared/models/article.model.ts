@@ -1,5 +1,5 @@
 export default interface Article {
-    title: string,
-    datePublished: string,
-    text: string
+  title: string;
+  datePublished: string;
+  text: string;
 }

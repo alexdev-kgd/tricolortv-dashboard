@@ -1,14 +1,14 @@
 {
-    "satelliteProviders":[
-        {
-            "name": "Триколор ТВ",
-            "deviceCount": 20000,
-            "year": 2015
-        },
-        {
-            "name": "Другие",
-            "deviceCount": 10000,
-            "year": 2015
-        }
-    ]
+  "satelliteProviders": [
+    {
+      "name": "Триколор ТВ",
+      "deviceCount": 20000,
+      "year": 2015
+    },
+    {
+      "name": "Другие",
+      "deviceCount": 10000,
+      "year": 2015
+    }
+  ]
 }

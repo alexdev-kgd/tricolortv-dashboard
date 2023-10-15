@@ -5,16 +5,18 @@ import { MenuComponent } from '../menu/menu.component';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.sass']
+  styleUrls: ['./search.component.sass'],
 })
 export class SearchComponent {
-  @ViewChild(MenuComponent, {static: true}) menuComponent: MenuComponent;
+  @ViewChild(MenuComponent, { static: true }) menuComponent: MenuComponent;
 
-  value = ""; // Search value
+  value = ''; // Search value
 
   constructor(private translationService: TranslationService) {}
 
   ngOnInit() {
-    this.translationService.currentLanguage.subscribe(() => this.translationService.checkLanguage());
+    this.translationService.currentLanguage.subscribe(() =>
+      this.translationService.checkLanguage(),
+    );
   }
 }

@@ -1,55 +1,55 @@
 {
-    "SIDEBAR": {
-        "HOME": "Home",
-        "STATISTICS": "Statistics",
-        "ARTICLES": "Articles",
-        "STAFF": "Staff",
-        "MODULES": "Modules",
-        "COMMENTS": "Comments",
-        "SETTINGS": "Settings",
-        "COPYRIGHT": "© NPJSC «National Satellite Company»"
-    },
-    "HEADER": {
-        "TITLE": "Admin Panel"
-    },
-    "BTNS": {
-        "NEXT": "Read Next",
-        "DETAILS": "Details",
-        "APPLY": "Apply",
-        "REPLY": "Reply",
-        "EDIT": "Edit",
-        "DELETE": "Delete"
-    },
-    "COMMENTS": {
-        "SUBJECT": "In article"
-    },
-    "SEARCHBAR": {
-        "PLACEHOLDER": "Start typing your query"
-    },
-    "CALENDAR": {
-        "LABEL": "Select date",
-        "START": "Start",
-        "END": "End"
-    },
-    "PAGINATOR": {
-        "PAGES": "pages",
-        "ARTICLES": "articles",
-        "STAFF": "staff",
-        "MODULES": "modules",
-        "COMMENTS": "comments"
-    },
-    "OPTIONS": {
-        "MAIN_SETTINGS": "Main Settings",
-        "PERFORMANCE": "Performance",
-        "INTERFACE": "Interface",
-        "DARK_MODE": "Dark Mode",
-        "ANIMS": "Enable Animations",
-        "FONT": "Font Size",
-        "ARTICLES_PER_PAGE": "Articles Per Page",
-        "STAFF_PER_PAGE": "Staff Per Page",
-        "MODULES_PER_PAGE": "Modules Per Page",
-        "COMMENTS_PER_PAGE": "Comments Per Page",
-        "INTERFACE_LANG": "Interface language",
-        "CONTENT_LANG": "Content language"
-    }
+  "SIDEBAR": {
+    "HOME": "Home",
+    "STATISTICS": "Statistics",
+    "ARTICLES": "Articles",
+    "STAFF": "Staff",
+    "MODULES": "Modules",
+    "COMMENTS": "Comments",
+    "SETTINGS": "Settings",
+    "COPYRIGHT": "© NPJSC «National Satellite Company»"
+  },
+  "HEADER": {
+    "TITLE": "Admin Panel"
+  },
+  "BTNS": {
+    "NEXT": "Read Next",
+    "DETAILS": "Details",
+    "APPLY": "Apply",
+    "REPLY": "Reply",
+    "EDIT": "Edit",
+    "DELETE": "Delete"
+  },
+  "COMMENTS": {
+    "SUBJECT": "In article"
+  },
+  "SEARCHBAR": {
+    "PLACEHOLDER": "Start typing your query"
+  },
+  "CALENDAR": {
+    "LABEL": "Select date",
+    "START": "Start",
+    "END": "End"
+  },
+  "PAGINATOR": {
+    "PAGES": "pages",
+    "ARTICLES": "articles",
+    "STAFF": "staff",
+    "MODULES": "modules",
+    "COMMENTS": "comments"
+  },
+  "OPTIONS": {
+    "MAIN_SETTINGS": "Main Settings",
+    "PERFORMANCE": "Performance",
+    "INTERFACE": "Interface",
+    "DARK_MODE": "Dark Mode",
+    "ANIMS": "Enable Animations",
+    "FONT": "Font Size",
+    "ARTICLES_PER_PAGE": "Articles Per Page",
+    "STAFF_PER_PAGE": "Staff Per Page",
+    "MODULES_PER_PAGE": "Modules Per Page",
+    "COMMENTS_PER_PAGE": "Comments Per Page",
+    "INTERFACE_LANG": "Interface language",
+    "CONTENT_LANG": "Content language"
+  }
 }

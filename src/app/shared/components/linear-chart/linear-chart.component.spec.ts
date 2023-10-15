@@ -8,9 +8,8 @@ describe('LinearChartComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LinearChartComponent ]
-    })
-    .compileComponents();
+      declarations: [LinearChartComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

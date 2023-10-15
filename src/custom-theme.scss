@@ -1,10 +1,10 @@
-@import '~src/assets/sass/vars';
+@import "src/assets/sass/vars";
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@import '~@angular/material/theming';
+@import "@angular/material/theming";
 // Plus imports for other components in your app.
-@import './light-theme.scss';
-@import './dark-theme.scss';
+@import "./light-theme.scss";
+@import "./dark-theme.scss";
 
 $mat-theme-ignore-duplication-warnings: true;
 
@@ -14,69 +14,69 @@ $mat-theme-ignore-duplication-warnings: true;
 @include mat-core();
 
 $md-light: (
-    50 : #f4f4f4,
-    100 : #898989,
-    200 : #ffffff,
-    300 : #ffffff,
-    400 : #ffffff,
-    500 : #ffffff,
-    600 : #ffffff,
-    700 : #ffffff,
-    800 : #ffffff,
-    900 : #ffffff,
-    A100 : #ffffff,
-    A200 : #ffffff,
-    A400 : #ffffff,
-    A700 : #ffffff,
-    contrast: (
-        50 : #000000,
-        100 : #000000,
-        200 : #000000,
-        300 : #000000,
-        400 : #000000,
-        500 : #000000,
-        600 : #000000,
-        700 : #000000,
-        800 : #000000,
-        900 : #000000,
-        A100 : #000000,
-        A200 : #000000,
-        A400 : #000000,
-        A700 : #000000,
-    )
+  50: #f4f4f4,
+  100: #898989,
+  200: #ffffff,
+  300: #ffffff,
+  400: #ffffff,
+  500: #ffffff,
+  600: #ffffff,
+  700: #ffffff,
+  800: #ffffff,
+  900: #ffffff,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #ffffff,
+  A700: #ffffff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
 );
 
 $md-dark: (
-  50 : #303030,
-  100 : #424242,
-  200 : #ddd,
-  300 : #7b7b7b,
-  400 : #5e5e5e,
-  500 : #424242,
-  600 : #3c3c3c,
-  700 : #333333,
-  800 : #2b2b2b,
-  900 : #1d1d1d,
-  A100 : #f07878,
-  A200 : #eb4a4a,
-  A400 : #ff0303,
-  A700 : #e90000,
+  50: #303030,
+  100: #424242,
+  200: #ddd,
+  300: #7b7b7b,
+  400: #5e5e5e,
+  500: #424242,
+  600: #3c3c3c,
+  700: #333333,
+  800: #2b2b2b,
+  900: #1d1d1d,
+  A100: #f07878,
+  A200: #eb4a4a,
+  A400: #ff0303,
+  A700: #e90000,
   contrast: (
-      50 : #000000,
-      100 : #000000,
-      200 : #3d3d3d,
-      300 : #ffffff,
-      400 : #ffffff,
-      500 : #ffffff,
-      600 : #ffffff,
-      700 : #ffffff,
-      800 : #ffffff,
-      900 : #ffffff,
-      A100 : #000000,
-      A200 : #ffffff,
-      A400 : #ffffff,
-      A700 : #ffffff,
-  )
+    50: #000000,
+    100: #000000,
+    200: #3d3d3d,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
 );
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
@@ -93,20 +93,24 @@ $tricolortv-dashboard-accent-dark: mat-palette($md-dark, 200);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$tricolortv-dashboard-light-theme: mat-light-theme((
-  color: (
-    primary: $tricolortv-dashboard-primary,
-    accent: $tricolortv-dashboard-accent,
-    warn: $tricolortv-dashboard-warn,
+$tricolortv-dashboard-light-theme: mat-light-theme(
+  (
+    color: (
+      primary: $tricolortv-dashboard-primary,
+      accent: $tricolortv-dashboard-accent,
+      warn: $tricolortv-dashboard-warn,
+    ),
   )
-));
+);
 
-$tricolortv-dashboard-dark-theme: mat-dark-theme((
-  color: (
-    primary: $tricolortv-dashboard-primary-dark,
-    accent: $tricolortv-dashboard-accent-dark,
+$tricolortv-dashboard-dark-theme: mat-dark-theme(
+  (
+    color: (
+      primary: $tricolortv-dashboard-primary-dark,
+      accent: $tricolortv-dashboard-accent-dark,
+    ),
   )
-));
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -132,7 +136,8 @@ $text-color-dark-theme: #ddd;
   @include dark-theme;
 }
 
-html, body { 
+html,
+body {
   @media (min-width: $tablet) {
     height: 100%;
   }
@@ -140,4 +145,7 @@ html, body {
   height: auto;
 }
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

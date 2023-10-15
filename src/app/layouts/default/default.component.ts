@@ -1,5 +1,11 @@
 import { MediaMatcher } from '@angular/cdk/layout';
-import { Component, Directive, ElementRef, HostListener, OnInit } from '@angular/core';
+import {
+  Component,
+  Directive,
+  ElementRef,
+  HostListener,
+  OnInit,
+} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { slideInAnimation } from '@shared/animations';
 import { DEVICES, WINDOW_SIZE } from '@shared/constants/windowSize';
@@ -8,13 +14,16 @@ import { fromEvent } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 
 @Directive({
-  selector: '[sidebarLink]'
+  selector: '[sidebarLink]',
 })
 export class BindClickEventDirective {
-  constructor(private element: ElementRef, private defaultComponent: DefaultComponent) {}
-  @HostListener('click') 
+  constructor(
+    private element: ElementRef,
+    private defaultComponent: DefaultComponent,
+  ) {}
+  @HostListener('click')
   onClick() {
-    if(this.defaultComponent.checkWindowSize() === DEVICES.TABLET)
+    if (this.defaultComponent.checkWindowSize() === DEVICES.TABLET)
       this.defaultComponent.menuOpened = false;
   }
 }
@@ -23,9 +32,7 @@ export class BindClickEventDirective {
   selector: 'app-default',
   templateUrl: './default.component.html',
   styleUrls: ['./default.component.sass'],
-  animations: [
-    slideInAnimation
-  ]
+  animations: [slideInAnimation],
 })
 export class DefaultComponent implements OnInit {
   mobileQuery: MediaQueryList;
@@ -34,7 +41,10 @@ export class DefaultComponent implements OnInit {
 
   public menuOpened = true;
 
-  constructor(private media: MediaMatcher, private animationsService: AnimationsService) {
+  constructor(
+    private media: MediaMatcher,
+    private animationsService: AnimationsService,
+  ) {
     this.mobileQuery = this.media.matchMedia('(min-width: 768px)');
   }
 
@@ -42,20 +52,20 @@ export class DefaultComponent implements OnInit {
     this.observeWindowResize();
     this.applyDeviceConfigs();
     this.animationsService.isAnimationsDisabled.subscribe((bool) => {
-      this.isDisabled = bool 
+      this.isDisabled = bool;
     });
   }
 
   observeWindowResize(): void {
-    fromEvent(window, 'resize').pipe(
-      debounceTime(100)
-    ).subscribe(() => {
-      this.applyDeviceConfigs();
-    });
+    fromEvent(window, 'resize')
+      .pipe(debounceTime(100))
+      .subscribe(() => {
+        this.applyDeviceConfigs();
+      });
   }
 
   applyDeviceConfigs(): void {
-    if(this.checkWindowSize() === DEVICES.TABLET) {
+    if (this.checkWindowSize() === DEVICES.TABLET) {
       this.animationsService.checkAnimationLocalStorage(true);
       this.menuOpened = false;
     } else {
@@ -66,16 +76,17 @@ export class DefaultComponent implements OnInit {
 
   checkWindowSize(): DEVICES {
     const outerWidth = window.outerWidth;
-    if(outerWidth < WINDOW_SIZE.TABLET) return DEVICES.TABLET;
+    if (outerWidth < WINDOW_SIZE.TABLET) return DEVICES.TABLET;
     return DEVICES.PC;
   }
 
   toggleMenu(event?: boolean): void {
-    this.menuOpened = !this.menuOpened
+    this.menuOpened = !this.menuOpened;
   }
 
   prepareRoute(outlet: RouterOutlet): void {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
+    return (
+      outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation
+    );
   }
-
 }

@@ -49,9 +49,11 @@
 
   #smallStats__container mat-card mat-footer,
   .staff__container {
+    /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
     mat-card-title {
       color: #000;
     }
+    /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
     mat-card-subtitle {
       color: #898989;
     }

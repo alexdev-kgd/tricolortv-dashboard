@@ -64,4 +64,4 @@ import { TranslateModule } from '@ngx-translate/core';
   ],
   providers: [],
 })
-export class DefaultModule { }
+export class DefaultModule {}

@@ -1,55 +1,55 @@
 {
-    "SIDEBAR": {
-        "HOME": "Главная",
-        "STATISTICS": "Статистика",
-        "ARTICLES": "Статьи",
-        "STAFF": "Сотрудники",
-        "MODULES": "Модули",
-        "COMMENTS": "Комментарии",
-        "SETTINGS": "Настройки",
-        "COPYRIGHT": "© НАО «Национальная спутниковая компания»"
-    },
-    "HEADER": {
-        "TITLE": "Admin-панель"
-    },
-    "BTNS": {
-        "NEXT": "Читать далее",
-        "DETAILS": "Подробнее",
-        "APPLY": "Применить",
-        "REPLY": "Ответить",
-        "EDIT": "Редактировать",
-        "DELETE": "Удалить"
-    },
-    "COMMENTS": {
-        "SUBJECT": "в статье"
-    },
-    "SEARCHBAR": {
-        "PLACEHOLDER": "Начните вводить ваш запрос"
-    },
-    "DATEPICKER": {
-        "LABEL": "Выберите дату",
-        "START": "Начало",
-        "END": "Конец"
-    },
-    "PAGINATOR": {
-        "PAGES": "страниц",
-        "ARTICLES": "статей",
-        "STAFF": "сотрудников",
-        "MODULES": "модулей",
-        "COMMENTS": "комментариев"
-    },
-    "OPTIONS": {
-        "MAIN_SETTINGS": "Основные настройки",
-        "PERFORMANCE": "Производительность",
-        "INTERFACE": "Интерфейс",
-        "DARK_MODE": "Ночная тема",
-        "ANIMS": "Включить анимации",
-        "FONT": "Размер Шрифта",
-        "ARTICLES_PER_PAGE": "Количество статей на страницу",
-        "STAFF_PER_PAGE": "Количество сотрудников на страницу",
-        "MODULES_PER_PAGE": "Количество модулей на страницу",
-        "COMMENTS_PER_PAGE": "Количество комментариев на страницу",
-        "INTERFACE_LANG": "Язык интерфейса",
-        "CONTENT_LANG": "Язык контента"
-    }
+  "SIDEBAR": {
+    "HOME": "Главная",
+    "STATISTICS": "Статистика",
+    "ARTICLES": "Статьи",
+    "STAFF": "Сотрудники",
+    "MODULES": "Модули",
+    "COMMENTS": "Комментарии",
+    "SETTINGS": "Настройки",
+    "COPYRIGHT": "© НАО «Национальная спутниковая компания»"
+  },
+  "HEADER": {
+    "TITLE": "Admin-панель"
+  },
+  "BTNS": {
+    "NEXT": "Читать далее",
+    "DETAILS": "Подробнее",
+    "APPLY": "Применить",
+    "REPLY": "Ответить",
+    "EDIT": "Редактировать",
+    "DELETE": "Удалить"
+  },
+  "COMMENTS": {
+    "SUBJECT": "в статье"
+  },
+  "SEARCHBAR": {
+    "PLACEHOLDER": "Начните вводить ваш запрос"
+  },
+  "DATEPICKER": {
+    "LABEL": "Выберите дату",
+    "START": "Начало",
+    "END": "Конец"
+  },
+  "PAGINATOR": {
+    "PAGES": "страниц",
+    "ARTICLES": "статей",
+    "STAFF": "сотрудников",
+    "MODULES": "модулей",
+    "COMMENTS": "комментариев"
+  },
+  "OPTIONS": {
+    "MAIN_SETTINGS": "Основные настройки",
+    "PERFORMANCE": "Производительность",
+    "INTERFACE": "Интерфейс",
+    "DARK_MODE": "Ночная тема",
+    "ANIMS": "Включить анимации",
+    "FONT": "Размер Шрифта",
+    "ARTICLES_PER_PAGE": "Количество статей на страницу",
+    "STAFF_PER_PAGE": "Количество сотрудников на страницу",
+    "MODULES_PER_PAGE": "Количество модулей на страницу",
+    "COMMENTS_PER_PAGE": "Количество комментариев на страницу",
+    "INTERFACE_LANG": "Язык интерфейса",
+    "CONTENT_LANG": "Язык контента"
+  }
 }

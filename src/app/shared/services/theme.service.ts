@@ -2,25 +2,27 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ThemeService {
-  public isDarkMode: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  public isDarkMode: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(
+    false,
+  );
 
   checkTheme(): void {
     const prefersDarkTheme = window.matchMedia('(prefers-color-scheme: dark)');
 
-    if(localStorage.getItem('theme')) {
-      (localStorage.getItem('theme') === 'dark') 
+    if (localStorage.getItem('theme')) {
+      localStorage.getItem('theme') === 'dark'
         ? document.body.classList.add('dark-theme')
         : document.body.classList.remove('dark-theme');
     } else {
       if (prefersDarkTheme.matches) {
-        localStorage.setItem('theme', 'dark')
-        document.body.classList.add('dark-theme')
+        localStorage.setItem('theme', 'dark');
+        document.body.classList.add('dark-theme');
       } else {
         localStorage.setItem('theme', 'light');
-        document.body.classList.remove('dark-theme')
+        document.body.classList.remove('dark-theme');
       }
     }
   }

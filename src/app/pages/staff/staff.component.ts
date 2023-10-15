@@ -1,4 +1,10 @@
-import { ChangeDetectorRef, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { MatPaginator, MatPaginatorIntl } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { FontSizeService } from '@shared/services/font-size.service';
@@ -9,10 +15,12 @@ import { PaginatorStaffService } from './paginator-staff.service';
   selector: 'app-staff',
   templateUrl: './staff.component.html',
   styleUrls: ['./staff.component.sass'],
-  providers: [{
-    provide: MatPaginatorIntl,
-    useClass: PaginatorStaffService
-  }]
+  providers: [
+    {
+      provide: MatPaginatorIntl,
+      useClass: PaginatorStaffService,
+    },
+  ],
 })
 export class StaffComponent implements OnInit, OnDestroy {
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -24,44 +32,53 @@ export class StaffComponent implements OnInit, OnDestroy {
 
   fontSizeValue: string;
 
-  staff = [{
-    firstName: 'Иван',
-    lastName: 'Иванов',
-    occupy: 'Дилер компании "Триколор ТВ"',
-    photo: 'assets/img/person.jpg'
-  },{
-    firstName: 'Иван',
-    lastName: 'Иванов',
-    occupy: 'Дилер компании "Триколор ТВ"',
-    photo: 'assets/img/person.jpg'
-  },{
-    firstName: 'Иван',
-    lastName: 'Иванов',
-    occupy: 'Дилер компании "Триколор ТВ"',
-    photo: 'assets/img/person.jpg'
-  },{
-    firstName: 'Иван',
-    lastName: 'Иванов',
-    occupy: 'Дилер компании "Триколор ТВ"',
-    photo: 'assets/img/person.jpg'
-  },{
-    firstName: 'Иван',
-    lastName: 'Иванов',
-    occupy: 'Дилер компании "Триколор ТВ"',
-    photo: 'assets/img/person.jpg'
-  },{
-    firstName: 'Иван',
-    lastName: 'Иванов',
-    occupy: 'Дилер компании "Триколор ТВ"',
-    photo: 'assets/img/person.jpg'
-  }];
+  staff = [
+    {
+      firstName: 'Иван',
+      lastName: 'Иванов',
+      occupy: 'Дилер компании "Триколор ТВ"',
+      photo: 'assets/img/person.jpg',
+    },
+    {
+      firstName: 'Иван',
+      lastName: 'Иванов',
+      occupy: 'Дилер компании "Триколор ТВ"',
+      photo: 'assets/img/person.jpg',
+    },
+    {
+      firstName: 'Иван',
+      lastName: 'Иванов',
+      occupy: 'Дилер компании "Триколор ТВ"',
+      photo: 'assets/img/person.jpg',
+    },
+    {
+      firstName: 'Иван',
+      lastName: 'Иванов',
+      occupy: 'Дилер компании "Триколор ТВ"',
+      photo: 'assets/img/person.jpg',
+    },
+    {
+      firstName: 'Иван',
+      lastName: 'Иванов',
+      occupy: 'Дилер компании "Триколор ТВ"',
+      photo: 'assets/img/person.jpg',
+    },
+    {
+      firstName: 'Иван',
+      lastName: 'Иванов',
+      occupy: 'Дилер компании "Триколор ТВ"',
+      photo: 'assets/img/person.jpg',
+    },
+  ];
 
   dataSource: MatTableDataSource<any> = new MatTableDataSource<any>(this.staff);
 
   obs: Observable<any>;
 
-  constructor(private changeDetectorRef: ChangeDetectorRef, private fontSizeService: FontSizeService) {
-  }
+  constructor(
+    private changeDetectorRef: ChangeDetectorRef,
+    private fontSizeService: FontSizeService,
+  ) {}
 
   ngOnInit(): void {
     this.changeDetectorRef.detectChanges();
@@ -72,6 +89,6 @@ export class StaffComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if(this.dataSource) this.dataSource.disconnect();
+    if (this.dataSource) this.dataSource.disconnect();
   }
 }

@@ -1,6 +1,8 @@
-import { SETTINGS_DEFAULT_ITEM_COUNT_PER_PAGE,
-         SETTINGS_DEFAULT_INTERFACE_LANGUAGE,
-         SETTINGS_DEFAULT_CONTENT_LANGUAGE } from './../../shared/constants/settings';
+import {
+  SETTINGS_DEFAULT_ITEM_COUNT_PER_PAGE,
+  SETTINGS_DEFAULT_INTERFACE_LANGUAGE,
+  SETTINGS_DEFAULT_CONTENT_LANGUAGE,
+} from './../../shared/constants/settings';
 import { TranslationService } from './../../shared/services/translation.service';
 import { AnimationsService } from '@services/animations.service';
 import { ThemeService } from '@services/theme.service';
@@ -9,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
-  styleUrls: ['./settings.component.sass']
+  styleUrls: ['./settings.component.sass'],
 })
 export class SettingsComponent implements OnInit {
   toggleThemeChecked: boolean;
@@ -19,7 +21,7 @@ export class SettingsComponent implements OnInit {
   articlesCountValue;
 
   staffCountValue;
-  
+
   modulesCountValue;
 
   commentsCountValue;
@@ -28,36 +30,54 @@ export class SettingsComponent implements OnInit {
 
   contentLangValue;
 
-  constructor(private themeService: ThemeService, 
-              private animationsService: AnimationsService,
-              private translationService: TranslationService) {}
+  constructor(
+    private themeService: ThemeService,
+    private animationsService: AnimationsService,
+    private translationService: TranslationService,
+  ) {}
 
   ngOnInit(): void {
     localStorage.getItem('theme') === 'dark'
-      ? this.toggleThemeChecked = true
-      : this.toggleThemeChecked = false;
+      ? (this.toggleThemeChecked = true)
+      : (this.toggleThemeChecked = false);
 
-    this.toggleAnimationsChecked = !this.animationsService.checkAnimationLocalStorage();
+    this.toggleAnimationsChecked =
+      !this.animationsService.checkAnimationLocalStorage();
 
-    this.articlesCountValue = localStorage.getItem('articlesCount') || SETTINGS_DEFAULT_ITEM_COUNT_PER_PAGE;
-    
-    this.staffCountValue = localStorage.getItem('staffCount') || SETTINGS_DEFAULT_ITEM_COUNT_PER_PAGE;
+    this.articlesCountValue =
+      localStorage.getItem('articlesCount') ||
+      SETTINGS_DEFAULT_ITEM_COUNT_PER_PAGE;
 
-    this.modulesCountValue = localStorage.getItem('modulesCount') || SETTINGS_DEFAULT_ITEM_COUNT_PER_PAGE;
+    this.staffCountValue =
+      localStorage.getItem('staffCount') ||
+      SETTINGS_DEFAULT_ITEM_COUNT_PER_PAGE;
 
-    this.commentsCountValue = localStorage.getItem('commentsCount') || SETTINGS_DEFAULT_ITEM_COUNT_PER_PAGE;
+    this.modulesCountValue =
+      localStorage.getItem('modulesCount') ||
+      SETTINGS_DEFAULT_ITEM_COUNT_PER_PAGE;
 
-    this.langValue = localStorage.getItem('language') || SETTINGS_DEFAULT_INTERFACE_LANGUAGE;
+    this.commentsCountValue =
+      localStorage.getItem('commentsCount') ||
+      SETTINGS_DEFAULT_ITEM_COUNT_PER_PAGE;
 
-    this.contentLangValue = localStorage.getItem('contentLanguage') || SETTINGS_DEFAULT_CONTENT_LANGUAGE;
+    this.langValue =
+      localStorage.getItem('language') || SETTINGS_DEFAULT_INTERFACE_LANGUAGE;
 
-    this.translationService.currentLanguage.subscribe(() => this.translationService.checkLanguage());
+    this.contentLangValue =
+      localStorage.getItem('contentLanguage') ||
+      SETTINGS_DEFAULT_CONTENT_LANGUAGE;
+
+    this.translationService.currentLanguage.subscribe(() =>
+      this.translationService.checkLanguage(),
+    );
   }
 
   toggleTheme(): void {
     document.body.classList.toggle('dark-theme');
 
-    const theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+    const theme = document.body.classList.contains('dark-theme')
+      ? 'dark'
+      : 'light';
 
     localStorage.setItem('theme', theme);
 
@@ -65,12 +85,12 @@ export class SettingsComponent implements OnInit {
   }
 
   toggleAnimations(event): void {
-    if(event.checked) {
+    if (event.checked) {
       this.animationsService.isAnimationsDisabled.next(false);
-      localStorage.setItem("animations", "enabled");
+      localStorage.setItem('animations', 'enabled');
     } else {
       this.animationsService.isAnimationsDisabled.next(true);
-      localStorage.setItem("animations", "disabled");
+      localStorage.setItem('animations', 'disabled');
     }
   }
 
