@@ -16,18 +16,18 @@ mat-card, #datepicker, mat-paginator
 ::ng-deep .mat-slide-toggle.mat-checked .mat-ripple-element
     background-color: #004c9f !important
 
-::ng-deep .mat-form-field-underline
+::ng-deep .mat-mdc-form-field-underline
     height: 0 !important
 
-::ng-deep .mat-focused .mat-form-field-label
+::ng-deep .mat-focused .mat-mdc-form-field-label
     /*change color of label*/
     color: #000 !important
 
-::ng-deep.mat-form-field-ripple
+::ng-deep.mat-mdc-form-field-ripple
     /*change color of underline when focused*/
     background-color: transparent !important
 
-::ng-deep .mat-form-field-infix
+::ng-deep .mat-mdc-form-field-infix
     border-top: 0 !important
 
 ::ng-deep .mat-datepicker-popup
@@ -64,32 +64,32 @@ mat-card, #datepicker, mat-paginator
         @media (min-width: $tablet)
             width: auto
     
-    .mat-paginator
+    .mat-mdc-paginator
 
-        ::ng-deep .mat-paginator-page-size
+        ::ng-deep .mat-mdc-paginator-page-size
             display: none !important
 
-        ::ng-deep .mat-paginator-outer-container
+        ::ng-deep .mat-mdc-paginator-outer-container
             justify-content: space-around
 
-        ::ng-deep .mat-paginator-container
+        ::ng-deep .mat-mdc-paginator-container
             min-height: auto
 
-        ::ng-deep .mat-paginator-range-label
+        ::ng-deep .mat-mdc-paginator-range-label
             order: 2
             margin: 0
             white-space: nowrap
             overflow: hidden
 
-        ::ng-deep .mat-paginator-range-actions
+        ::ng-deep .mat-mdc-paginator-range-actions
             width: 100%
             align-items: center
             justify-content: space-between
             
-            .mat-focus-indicator:nth-child(2)
+            .mat-mdc-focus-indicator:nth-child(2)
                 order: 1
 
-            .mat-focus-indicator:nth-child(3)
+            .mat-mdc-focus-indicator:nth-child(3)
                 order: 3
 
 #articles__container
@@ -112,6 +112,7 @@ mat-card, #datepicker, mat-paginator
                 vertical-align: middle
 
             #article__title
+                padding-left: 16px
                 font-size: 18px
 
             #article__date

@@ -1,5 +1,5 @@
 <mat-toolbar color="primary">
-  <div class="header__leftSide" fxLayout="row" fxLayoutAlign="start center">
+  <div class="header__leftSide">
     <a href="#">
       <img
         *ngIf="!isDarkMode && !latinLetters"
@@ -31,12 +31,7 @@
       <p>Dashboard</p>
     </span>
   </div>
-  <div
-    class="header__right-side"
-    fxFlex
-    fxLayout="row"
-    fxLayoutAlign="end center"
-  >
+  <div class="header__right-side">
     <button
       mat-icon-button
       color="accent"
@@ -45,7 +40,7 @@
     >
       <mat-icon>menu</mat-icon>
     </button>
-    <ul fxLayout="row" fxLayoutGap="28px" class="right-side__ul">
+    <ul class="right-side__ul">
       <li id="right-side__li">
         <button mat-icon-button color="accent">
           <mat-icon>mail outline</mat-icon>

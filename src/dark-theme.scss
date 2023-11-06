@@ -11,7 +11,7 @@
   app-search {
     color: $text-color-dark-theme;
 
-    .mat-focused {
+    .mat-mdc-focused {
       color: #fff;
     }
   }
@@ -49,11 +49,11 @@
     }
   }
   /* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version. */
-  .mat-focused .mat-form-field-outline,
-  .mat-focused .mat-form-field-empty.mat-form-field-label,
-  .mat-focused .mat-form-field-label,
-  .mat-focused .mat-form-field-underline,
-  .mat-focused .mat-input-element,
+  .mat-mdc-focused .mat-mdc-form-field-outline,
+  .mat-mdc-focused .mat-mdc-form-field-empty.mat-mdc-form-field-label,
+  .mat-mdc-focused .mat-mdc-form-field-label,
+  .mat-mdc-focused .mat-mdc-form-field-underline,
+  .mat-mdc-focused .mat-input-element,
   ::placeholder {
     color: #fff !important;
   }

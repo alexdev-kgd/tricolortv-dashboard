@@ -6,8 +6,23 @@
         width: 100%
         padding: 15px 25px
         height: 86px
+        display: flex
+        justify-content: space-between
 
         .header
+            &__leftSide,
+            &__rightSide
+                display: flex
+                flex-direction: row
+
+            &__leftSide
+                justify-content: flex-start
+                align-items: center
+
+            &__rightSide
+                justify-content: flex-end
+                align-items: center
+
             &__logo
                 width: 210px
                 height: 52px
@@ -35,6 +50,10 @@
 
                 @media (min-width: $tablet + 100px)
                     display: none
+
+        .right-side__ul
+            gap: 28px
+
 
     li > button
         width: auto
