@@ -97,4 +97,11 @@
       color: #000;
     }
   }
+
+  #settings-select-panel mat-option.mdc-list-item--selected {
+    & > span,
+    .mat-pseudo-checkbox::after {
+      color: #000;
+    }
+  }
 }

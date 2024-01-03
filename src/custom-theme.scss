@@ -118,11 +118,12 @@ $tricolortv-dashboard-dark-theme: mat-dark-theme(
 @include angular-material-theme($tricolortv-dashboard-light-theme);
 
 $text-color-dark-theme: #ddd;
+
+// Detect Color Scheme Via User's OS Setting or User Agent
 @media (prefers-color-scheme: light) {
   @include angular-material-color($tricolortv-dashboard-light-theme);
   @include light-theme;
 }
-
 @media (prefers-color-scheme: dark) {
   .dark-theme {
     @include angular-material-color($tricolortv-dashboard-dark-theme);
@@ -130,6 +131,7 @@ $text-color-dark-theme: #ddd;
   }
 }
 
+// Detect Color Scheme Via Local Storage Value
 @include light-theme;
 .dark-theme {
   @include angular-material-color($tricolortv-dashboard-dark-theme);
