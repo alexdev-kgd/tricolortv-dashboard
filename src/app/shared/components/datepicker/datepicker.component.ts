@@ -52,7 +52,7 @@ export class DatepickerComponent implements OnInit {
 
   ngOnInit(): void {
     this.translationService.currentLanguage.subscribe(() => {
-      this.setLocale(localStorage.getItem('language'));
+      this.setLocale(localStorage.getItem('language') || 'ru');
 
       this.translationService.currentLanguage.subscribe(() =>
         this.translationService.checkLanguage(),
