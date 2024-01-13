@@ -10,7 +10,8 @@
     "COPYRIGHT": "© NPJSC «National Satellite Company»"
   },
   "HEADER": {
-    "TITLE": "Admin Panel"
+    "TITLE": "Admin Panel",
+    "SIGNIN": "Sign In"
   },
   "BTNS": {
     "NEXT": "Read Next",

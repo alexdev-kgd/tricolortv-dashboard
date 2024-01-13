@@ -1,65 +1,73 @@
 <mat-toolbar color="primary">
-  <div class="header__leftSide">
+  <div class="header header__left-side">
     <a href="#">
       <img
         *ngIf="!isDarkMode && !latinLetters"
         src="../../assets/img/logo.png"
         alt="tricolortv"
-        class="header__logo"
+        class="header header__logo"
       />
       <img
         *ngIf="isDarkMode && !latinLetters"
         src="../../assets/img/logo_light.png"
         alt="tricolortv"
-        class="header__logo"
+        class="header header__logo"
       />
       <img
         *ngIf="!isDarkMode && latinLetters"
         src="../../assets/img/logo_en.png"
         alt="tricolortv_en"
-        class="header__logo"
+        class="header header__logo"
       />
       <img
         *ngIf="isDarkMode && latinLetters"
         src="../../assets/img/logo_light_en.png"
         alt="tricolortv_en"
-        class="header__logo"
+        class="header header__logo"
       />
     </a>
-    <span class="header__title">
+    <span class="header header__title">
       <h3>{{ "HEADER.TITLE" | translate }}</h3>
       <p>Dashboard</p>
     </span>
   </div>
-  <div class="header__right-side">
+  <div class="header header__right-side">
     <button
       mat-icon-button
       color="accent"
-      class="header__menu-mobile"
+      class="header header__menu-mobile"
       (click)="toggleSidebar()"
     >
       <mat-icon>menu</mat-icon>
     </button>
-    <ul class="right-side__ul">
-      <li id="right-side__li">
+    <ul class="header-right-side header-right-side__ul" id="loggedInUser-menu" *ngIf="false">
+      <li id="header-right-side header-right-side__li">
         <button mat-icon-button color="accent">
           <mat-icon>mail outline</mat-icon>
         </button>
       </li>
-      <li id="right-side__li">
+      <li id="header-right-side header-right-side__li">
         <button mat-icon-button color="accent">
           <mat-icon>notifications</mat-icon>
         </button>
       </li>
-      <li id="right-side__li">
-        <button mat-icon-button id="right-side__profile" color="accent">
+      <li id="header-right-side header-right-side__li">
+        <button mat-icon-button id="header-right-side header-right-side__profile" color="accent">
           <mat-icon>person_outline</mat-icon>
           <span>Александр Абдулаев</span>
         </button>
       </li>
-      <li id="right-side__li">
+      <li id="header-right-side header-right-side__li">
         <button mat-icon-button color="accent">
           <mat-icon>exit_to_app</mat-icon>
+        </button>
+      </li>
+    </ul>
+    <ul class="header-right-side header-right-side__ul" id="notLoggedIn-menu" *ngIf="true">
+      <li id="header-right-side__li">
+        <button mat-icon-button id="header-right-side__sign-in" color="accent">
+          <span>{{ "HEADER.SIGNIN" | translate }}</span>
+          <mat-icon>login</mat-icon>
         </button>
       </li>
     </ul>

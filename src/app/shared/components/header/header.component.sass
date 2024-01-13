@@ -10,18 +10,17 @@
         justify-content: space-between
 
         .header
-            &__leftSide,
-            &__rightSide
+            &__left-side,
+            &__right-side
                 display: flex
                 flex-direction: row
+                align-items: center
 
-            &__leftSide
+            &__left-side
                 justify-content: flex-start
-                align-items: center
 
-            &__rightSide
+            &__right-side
                 justify-content: flex-end
-                align-items: center
 
             &__logo
                 width: 210px
@@ -51,14 +50,23 @@
                 @media (min-width: $tablet + 100px)
                     display: none
 
-        .right-side__ul
-            gap: 28px
+        .header-right-side
+            &__ul
+                gap: 28px
         
-        #right-side__profile
-            font-size: 14px
-            display: flex
-            align-items: center
+        #header-right-side
+            &__profile
+                font-size: 14px
+                display: flex
+                align-items: center
 
+            &__sign-in
+                font-size: 14px
+                display: flex
+                align-items: center
+
+                mat-icon
+                    padding-left: 10px
 
     li > button
         width: auto
