@@ -17,6 +17,7 @@ import { DefaultComponent } from './app/layouts/default/default.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { environment } from './environments/environment';
+import { AppConfigModule } from '@shared/config/app-config.module';
 
 if (environment.production) {
   enableProdMode();
@@ -79,6 +80,7 @@ bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routes),
     importProvidersFrom([HttpClientModule, BrowserAnimationsModule]),
+    importProvidersFrom([AppConfigModule]),
     importProvidersFrom(
       TranslateModule.forRoot({
         loader: {
@@ -89,7 +91,7 @@ bootstrapApplication(AppComponent, {
         defaultLanguage: 'ru',
       })
     ),
-    {
+    { // Removes bottom space from MatFormField component
       provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
       useValue: {
         subscriptSizing: 'dynamic',

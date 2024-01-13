@@ -2,14 +2,14 @@ import * as mongoose from "mongoose";
 
 const articleModel = (mongoose) => {
   const Article = mongoose.model(
-    "Article",
+    "Articles",
     mongoose.Schema(
       {
         id: Number,
         title: String,
-        date: String,
+        datePublished: String,
+        authorId: Number,
         content: String,
-        authorId: Number
       },
       { timestamps: true },
     ),

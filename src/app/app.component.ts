@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
     RouterOutlet,
     HttpClientModule,
     DefaultModule,
-    CommonModule
+    CommonModule,
   ],
   standalone: true,
 })

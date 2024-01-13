@@ -13,6 +13,8 @@ import { Observable } from 'rxjs';
 import { PaginatorArticlesService } from './paginator-articles.service';
 import Article from '@shared/models/article.model';
 import { SETTINGS_DEFAULT_CONTENT_LANGUAGE } from '@shared/constants/settings';
+import { ArticlesService } from './articles.service';
+import { IArticle } from './domain/interfaces/Article.interface';
 
 @Component({
   selector: 'app-articles',
@@ -255,18 +257,18 @@ export class ArticlesComponent implements OnInit, OnDestroy {
     },
   ];
 
-  dataSource: MatTableDataSource<any> = new MatTableDataSource<any>(
-    this.getContentByLanguage(),
-  );
+  articlesList: Observable<any>;
 
-  obs: Observable<any>;
+  dataSource: MatTableDataSource<any>;
 
   constructor(
     private changeDetectorRef: ChangeDetectorRef,
     private fontSizeService: FontSizeService,
     private translationService: TranslationService,
+    private articlesService: ArticlesService
   ) {}
 
+  // TODO: Make it to pick items by 'lang' property
   getContentByLanguage(): Article[] {
     const contentLanguage =
       localStorage.getItem('contentLanguage') ||
@@ -285,9 +287,15 @@ export class ArticlesComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.changeDetectorRef.detectChanges();
-    this.dataSource.paginator = this.paginator;
-    this.obs = this.dataSource.connect();
+    this.articlesService.loadList().subscribe((list) => {
+      this.dataSource = new MatTableDataSource<IArticle>(
+        list
+        // this.getContentByLanguage(),
+      );
+      this.changeDetectorRef.detectChanges();
+      this.dataSource.paginator = this.paginator;
+      this.articlesList = this.dataSource.connect();
+    })
 
     this.fontSizeValue = this.fontSizeService.getFontSizeClass();
 

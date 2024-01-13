@@ -36,8 +36,8 @@ export const get = (req, res) => {
   });
 };
 
-export const getAll = (req, res) => {
-  Article.find({}, (err, articleList) => {
-    err ? res.json(err) : res.json(articleList);
-  });
+export const getAll = async (req, res) => {
+  const articlesArr = await Article.find({});
+  console.log(articlesArr);
+  if (articlesArr) res.json(articlesArr);
 };

@@ -7,14 +7,14 @@
   <mat-card
     appearance="outlined"
     class="article"
-    *ngFor="let article of obs | async"
+    *ngFor="let article of articlesList | async"
   >
     <mat-card-title>
       <span id="article__title">{{ article.title }}</span>
       <span id="article__date">{{ article.datePublished }}</span>
     </mat-card-title>
     <mat-card-content [ngClass]="fontSizeValue">
-      {{ article.text }}
+      {{ article.content }}
     </mat-card-content>
     <mat-card-footer>
       <button mat-flat-button>{{ "BTNS.NEXT" | translate }}</button>

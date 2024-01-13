@@ -3,6 +3,8 @@ import { Router } from "express";
 
 const router = Router();
 
-router.get("/article", articleController.get);
+router.get("/Article/Get", articleController.get);
+
+router.get("/Article/GetAll", articleController.getAll);
 
 export default router;

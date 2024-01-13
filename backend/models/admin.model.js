@@ -1,7 +1,7 @@
 import * as mongoose from "mongoose";
 
 const Admin = mongoose.model(
-  "Admin",
+  "Admins",
   mongoose.Schema(
     {
       login: String,
