@@ -25,6 +25,7 @@ import { PieChartComponent } from './components/pie-chart/pie-chart.component';
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 import { SmallStatisticsContainerComponent } from './components/small-statistics-container/small-statistics-container.component';
 import { MatCardModule } from '@angular/material/card';
+import { LogoComponent } from './components/logo/logo.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { MatCardModule } from '@angular/material/card';
     PieChartComponent,
     BarChartComponent,
     SmallStatisticsContainerComponent,
+    LogoComponent,
   ],
   imports: [
     CommonModule,
