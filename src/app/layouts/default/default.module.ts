@@ -28,6 +28,7 @@ import { ModulesComponent } from '@pages/modules/modules.component';
 
 import { DefaultComponent } from './default.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { TranslateModule } from '@ngx-translate/core';
     CommonModule,
     RouterModule,
     SharedModule,
+    MatDialogModule,
     MatSidenavModule,
     MatCardModule,
     MatPaginatorModule,

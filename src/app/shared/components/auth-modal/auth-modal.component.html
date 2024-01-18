@@ -1,0 +1,60 @@
+<div mat-dialog-title class="dialog dialog__title">
+  <button
+    mat-icon-button
+    class="dialog dialog__btn-close"
+    type="button"
+    (click)="closeModal()"
+  >
+    <mat-icon [inline]="true">close</mat-icon>
+  </button>
+  <h1>{{ "SIGNIN.TITLE" | translate }}</h1>
+</div>
+<div mat-dialog-content class="dialog dialog__content">
+  <form *ngIf="formGroup" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <div class="form form__row">
+      <mat-form-field appearance="fill">
+        <input
+          placeholder="E-Mail"
+          matInput
+          formControlName="email"
+          type="text"
+          cdkFocusInitial
+        />
+      </mat-form-field>
+    </div>
+    <div class="form form__row">
+      <div class="form form__col">
+        <app-password-input
+          formControlName="password"
+          [placeholder]="'SIGNIN.PASSWORD'"
+          (validatePasswords)="validatePasswords()"
+        ></app-password-input>
+      </div>
+      <div class="form form__col">
+        <app-password-input
+          formControlName="repeatPassword"
+          [placeholder]="'SIGNIN.PASSWORD_REPEAT'"
+          (validatePasswords)="validatePasswords()"
+        ></app-password-input>
+      </div>
+    </div>
+
+    <div mat-dialog-actions class="dialog dialog__actions">
+      <button
+        mat-raised-button
+        color="primary"
+        [disabled]="formGroup.invalid"
+        type="submit"
+        class="dialog dialog__submit-btn"
+        id="primary-btn"
+      >
+        {{ "SIGNIN.SUBMIT" | translate }}
+      </button>
+      <div class="dialog-links dialog-links__container">
+        <a href="#">{{ "SIGNIN.FORGOT_PASSWORD" | translate }}</a>
+        <a href="#">{{ "SIGNIN.SIGNUP_BTN" | translate }}</a>
+      </div>
+    </div>
+  </form>
+  <app-spinner [isVisible]="isLoading" mode="fullscreen"></app-spinner>
+</div>

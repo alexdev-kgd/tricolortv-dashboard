@@ -1,7 +1,12 @@
 import { TranslationService } from '@services/translation.service';
 import { ThemeService } from '@services/theme.service';
 import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
+import { MatDialog } from "@angular/material/dialog";
+import { AuthModalComponent } from '../auth-modal/auth-modal.component';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { MODAL_DEFAULT_OPTIONS } from '@shared/constants/modal';
 
+@UntilDestroy()
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -23,6 +28,7 @@ export class HeaderComponent implements OnInit {
   constructor(
     private translationService: TranslationService,
     private themeService: ThemeService,
+    public dialog: MatDialog
   ) {}
 
   ngOnInit() {
@@ -49,5 +55,17 @@ export class HeaderComponent implements OnInit {
         ? (this.isDarkMode = true)
         : (this.isDarkMode = false);
     }
+  }
+
+  public openAuthDialog(): void {
+    const dialogRef = this.dialog.open<AuthModalComponent, void>(AuthModalComponent, MODAL_DEFAULT_OPTIONS);
+
+    const sub = dialogRef.afterClosed()
+      .pipe(untilDestroyed(this))
+      .subscribe((result) => {
+        if (result.wasUpdated || result.type === 'success') console.log('ok');
+
+        if (sub) sub.unsubscribe();
+      });
   }
 }

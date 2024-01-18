@@ -1,0 +1,27 @@
+$VERTICAL_PADDING: 25px
+
+.admin-panel_dialog
+    .dialog
+        &__title,
+        &__content
+            padding: 0 25px
+            position: relative
+
+        &__title
+            padding-top: $VERTICAL_PADDING
+
+        &__content
+            padding-bottom: $VERTICAL_PADDING
+
+        &__btn-close
+            position: absolute
+            right: 25px
+            top: 50%
+            transform: translateY(-50%)
+
+        &__actions
+            display: flex
+            flex-direction: column
+            justify-content: center
+
+

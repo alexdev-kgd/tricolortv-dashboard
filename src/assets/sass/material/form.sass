@@ -1,0 +1,28 @@
+$TOGGLE_VISIBILITY_ICON_SIZE: 16px
+    
+.form
+    &__row,
+    &__col
+        display: flex
+
+    &__row
+        padding: 10px 0
+        justify-content: space-between
+
+    &__col
+        flex: 1
+
+    mat-form-field
+        width: 100%
+
+        .mat-mdc-text-field-wrapper
+            border: 1px solid #000
+            border-radius: 10px
+
+        .mat-mdc-form-field-infix
+            display: flex
+            align-items: center
+
+        .password-toggle-visibility-icon
+            width: $TOGGLE_VISIBILITY_ICON_SIZE
+            height: $TOGGLE_VISIBILITY_ICON_SIZE

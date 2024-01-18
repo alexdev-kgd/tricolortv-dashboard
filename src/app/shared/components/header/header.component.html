@@ -42,7 +42,7 @@
     </ul>
     <ul class="header-right-side header-right-side__ul" id="notLoggedIn-menu" *ngIf="true">
       <li id="header-right-side__li">
-        <button mat-icon-button id="header-right-side__sign-in" color="accent">
+        <button mat-icon-button id="header-right-side__sign-in" color="accent" (click)="openAuthDialog()">
           <span>{{ "HEADER.SIGNIN" | translate }}</span>
           <mat-icon>login</mat-icon>
         </button>

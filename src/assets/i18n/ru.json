@@ -52,5 +52,22 @@
     "COMMENTS_PER_PAGE": "Количество комментариев на страницу",
     "INTERFACE_LANG": "Язык интерфейса",
     "CONTENT_LANG": "Язык контента"
+  },
+  "SIGNIN": {
+    "TITLE": "Аутентификация",
+    "PASSWORD": "Пароль",
+    "PASSWORD_REPEAT": "Повторите пароль",
+    "SUBMIT": "Войти",
+    "FORGOT_PASSWORD": "Забыли пароль?",
+    "SIGNUP_BTN": "Зарегистрироваться"
+  },
+  "SIGNUP": {
+    "TITLE": "Регистрация",
+    "NAME": "Имя",
+    "SURNAME": "Фамилия",
+    "PASSWORD": "Пароль",
+    "PASSWORD_REPEAT": "Повторите пароль",
+    "SUBMIT": "Зарегистрироваться",
+    "SIGNIN_BTN": "Войти"
   }
 }

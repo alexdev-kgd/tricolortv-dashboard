@@ -13,6 +13,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatCardModule } from '@angular/material/card';
+
+import { TranslateModule } from '@ngx-translate/core';
+
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
 import { SearchComponent } from './components/search/search.component';
 import { LinearChartComponent } from './components/linear-chart/linear-chart.component';
@@ -20,12 +25,13 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { InputNumberComponent } from './components/input-number/input-number.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { TranslateModule } from '@ngx-translate/core';
 import { PieChartComponent } from './components/pie-chart/pie-chart.component';
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 import { SmallStatisticsContainerComponent } from './components/small-statistics-container/small-statistics-container.component';
-import { MatCardModule } from '@angular/material/card';
 import { LogoComponent } from './components/logo/logo.component';
+import { AuthModalComponent } from './components/auth-modal/auth-modal.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { PasswordInputComponent } from './components/password-input/password-input.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +47,9 @@ import { LogoComponent } from './components/logo/logo.component';
     BarChartComponent,
     SmallStatisticsContainerComponent,
     LogoComponent,
+    AuthModalComponent,
+    SpinnerComponent,
+    PasswordInputComponent,
   ],
   imports: [
     CommonModule,
@@ -59,6 +68,7 @@ import { LogoComponent } from './components/logo/logo.component';
     MatNativeDateModule,
     ReactiveFormsModule,
     TranslateModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     HeaderComponent,
@@ -71,6 +81,9 @@ import { LogoComponent } from './components/logo/logo.component';
     DatepickerComponent,
     InputNumberComponent,
     SmallStatisticsContainerComponent,
+    AuthModalComponent,
+    SpinnerComponent,
+    PasswordInputComponent
   ],
 })
 export class SharedModule {}

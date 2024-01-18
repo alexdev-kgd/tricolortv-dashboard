@@ -52,5 +52,22 @@
     "COMMENTS_PER_PAGE": "Comments Per Page",
     "INTERFACE_LANG": "Interface language",
     "CONTENT_LANG": "Content language"
+  },
+  "SIGNIN": {
+    "TITLE": "Sign In",
+    "PASSWORD": "Password",
+    "PASSWORD_REPEAT": "Repeat password",
+    "SUBMIT": "Sign In",
+    "FORGOT_PASSWORD": "Forgot password?",
+    "SIGNUP_BTN": "Sign Up"
+  },
+  "SIGNUP": {
+    "TITLE": "Sign Up",
+    "NAME": "Name",
+    "SURNAME": "Surname",
+    "PASSWORD": "Password",
+    "PASSWORD_REPEAT": "Repeat password",
+    "SUBMIT": "Submit",
+    "SIGNIN_BTN": "Sign In"
   }
 }
